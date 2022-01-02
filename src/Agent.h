@@ -7,7 +7,9 @@
 #include "Path.h"
 #include "Vector2D.h"
 #include "utils.h"
-
+//#include "DecisionMakingAlgorithm.h"
+//#include "Blackboard.h"
+//#include "SensorySystem.h"
 
 class Agent
 {
@@ -19,8 +21,16 @@ public:
 		virtual ~SteeringBehavior() {};
 		virtual void applySteeringForce(Agent *agent, float dtime) {};
 	};
+
+	//SensorySystem sensors;
+protected:
+	//Blackboard blackboard;
+
 private:
 	SteeringBehavior *steering_behaviour;
+	//Pathfinder
+	//DecisionMakingAlgorithm* brain;
+
 	Vector2D position;
 	Vector2D velocity;
 	Vector2D target;

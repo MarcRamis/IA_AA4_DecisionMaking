@@ -91,8 +91,9 @@ void Agent::update(float dtime, SDL_Event *event)
 		break;
 	}
 
-	// Apply the steering behavior
-	steering_behaviour->applySteeringForce(this, dtime);
+	//sensors.Update(this, dtime);
+	//brain->Update(this, dtime);
+	steering_behaviour->applySteeringForce(this, dtime); // Apply the steering behavior
 	
 	// Update orientation
 	if (velocity.Length())

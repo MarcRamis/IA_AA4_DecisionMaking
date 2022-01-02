@@ -33,7 +33,7 @@ SceneDecisionsMouse::SceneDecisionsMouse()
 	rand_cell = Vector2D(-1,-1);
 	while (!maze->isValidCell(rand_cell))
 		rand_cell = Vector2D((float)(rand() % maze->getNumCellX()), (float)(rand() % maze->getNumCellY()));
-	agents[0]->setPosition(maze->cell2pix(rand_cell));
+	agents[1]->setPosition(maze->cell2pix(rand_cell));
 
 	// set the coin in a random cell (but at least 3 cells far from the agent)
 	coinPosition = Vector2D(-1, -1);
