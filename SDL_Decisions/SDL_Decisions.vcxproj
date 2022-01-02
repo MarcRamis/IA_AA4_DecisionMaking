@@ -132,21 +132,37 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\src\Agent.cpp" />
+    <ClCompile Include="..\src\Blackboard.cpp" />
+    <ClCompile Include="..\src\DecisionMakingAlgorithm.cpp" />
+    <ClCompile Include="..\src\FSM.cpp" />
+    <ClCompile Include="..\src\FSMChase.cpp" />
+    <ClCompile Include="..\src\FSMFlee.cpp" />
+    <ClCompile Include="..\src\FSMState.cpp" />
+    <ClCompile Include="..\src\FSMWander.cpp" />
     <ClCompile Include="..\src\Grid.cpp" />
     <ClCompile Include="..\src\main.cpp" />
     <ClCompile Include="..\src\PathFollowing.cpp" />
     <ClCompile Include="..\src\SceneDecisionsMouse.cpp" />
     <ClCompile Include="..\src\SDL_SimpleApp.cpp" />
     <ClCompile Include="..\src\Seek.cpp" />
+    <ClCompile Include="..\src\SensorySystem.cpp" />
     <ClCompile Include="..\src\utils.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\Agent.h" />
+    <ClInclude Include="..\src\Blackboard.h" />
+    <ClInclude Include="..\src\DecisionMakingAlgorithm.h" />
+    <ClInclude Include="..\src\FSM.h" />
+    <ClInclude Include="..\src\FSMChase.h" />
+    <ClInclude Include="..\src\FSMFlee.h" />
+    <ClInclude Include="..\src\FSMState.h" />
+    <ClInclude Include="..\src\FSMWander.h" />
     <ClInclude Include="..\src\Grid.h" />
     <ClInclude Include="..\src\Path.h" />
     <ClInclude Include="..\src\PathFollowing.h" />
     <ClInclude Include="..\src\SceneDecisionsMouse.h" />
     <ClInclude Include="..\src\Seek.h" />
+    <ClInclude Include="..\src\SensorySystem.h" />
     <ClInclude Include="..\src\utils.h" />
     <ClInclude Include="..\src\Scene.h" />
     <ClInclude Include="..\src\SDL_SimpleApp.h" />

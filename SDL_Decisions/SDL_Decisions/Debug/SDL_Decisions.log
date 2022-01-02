@@ -1,10 +1,2 @@
-﻿  Agent.cpp
-  Grid.cpp
-  main.cpp
-  PathFollowing.cpp
-  SceneDecisionsMouse.cpp
-  SDL_SimpleApp.cpp
-  Seek.cpp
-  utils.cpp
-  Generating Code...
+﻿  SceneDecisionsMouse.cpp
   SDL_Decisions.vcxproj -> D:\UNI Projects\AA4_DecisionMaking\bin\SDL_Decisions.exe

@@ -23,11 +23,22 @@ SceneDecisionsMouse::SceneDecisionsMouse()
 		rand_cell = Vector2D((float)(rand() % maze->getNumCellX()), (float)(rand() % maze->getNumCellY()));
 	agents[0]->setPosition(maze->cell2pix(rand_cell));
 
-	// set the coin in a random cell (but at least 3 cells far from the agent)
-	coinPosition = Vector2D(-1,-1);
-	while ((!maze->isValidCell(coinPosition)) || (Vector2D::Distance(coinPosition, rand_cell)<3))
-		coinPosition = Vector2D((float)(rand() % maze->getNumCellX()), (float)(rand() % maze->getNumCellY()));
+	// Enemy
+	agent = new Agent;
+	agent->loadSpriteTexture("../res/zombie2.png", 8);
+	agent->setBehavior(new PathFollowing);
+	agent->setTarget(Vector2D(-20, -20));
+	agents.push_back(agent);
+	// set agent position coords to the center of a random cell
+	rand_cell = Vector2D(-1,-1);
+	while (!maze->isValidCell(rand_cell))
+		rand_cell = Vector2D((float)(rand() % maze->getNumCellX()), (float)(rand() % maze->getNumCellY()));
+	agents[0]->setPosition(maze->cell2pix(rand_cell));
 
+	// set the coin in a random cell (but at least 3 cells far from the agent)
+	coinPosition = Vector2D(-1, -1);
+	while ((!maze->isValidCell(coinPosition)) || (Vector2D::Distance(coinPosition, rand_cell) < 3))
+		coinPosition = Vector2D((float)(rand() % maze->getNumCellX()), (float)(rand() % maze->getNumCellY()));
 }
 
 SceneDecisionsMouse::~SceneDecisionsMouse()
@@ -65,7 +76,10 @@ void SceneDecisionsMouse::update(float dtime, SDL_Event *event)
 		break;
 	}
 
-	agents[0]->update(dtime, event);
+	for (Agent * a : agents)
+	{
+		a->update(dtime,event);
+	}
 
 	// if we have arrived to the coin, replace it in a random cell!
 	if ((agents[0]->getCurrentTargetIndex() == -1) && (maze->pix2cell(agents[0]->getPosition()) == coinPosition))
@@ -95,7 +109,10 @@ void SceneDecisionsMouse::draw()
 		}
 	}
 
-	agents[0]->draw();
+	for (Agent* a : agents)
+	{
+		a->draw();
+	}
 }
 
 const char* SceneDecisionsMouse::getTitle()
