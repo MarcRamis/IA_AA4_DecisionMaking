@@ -120,6 +120,11 @@ const char* SceneDecisionsMouse::getTitle()
 	return "SDL Path Finding :: Decisions Mouse Demo";
 }
 
+std::vector<Agent*> SceneDecisionsMouse::getAgents()
+{
+	return agents;
+}
+
 void SceneDecisionsMouse::drawMaze()
 {
 	SDL_SetRenderDrawColor(TheApp::Instance()->getRenderer(), 0, 0, 255, 255);

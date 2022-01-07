@@ -1,158 +1,177 @@
 ﻿  Agent.cpp
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,15): error C2039: 'vector': is not a member of 'std'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\iostream(19): message : see declaration of 'std'
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,21): error C2143: syntax error: missing ';' before '<'
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,21): error C2433: 'Scene::vector': 'virtual' not permitted on data declarations
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,21): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,45): error C2238: unexpected token(s) preceding ';'
   DecisionMakingAlgorithm.cpp
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,15): error C2039: 'vector': is not a member of 'std'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\iostream(19): message : see declaration of 'std'
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,21): error C2143: syntax error: missing ';' before '<'
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,21): error C2433: 'Scene::vector': 'virtual' not permitted on data declarations
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,21): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,45): error C2238: unexpected token(s) preceding ';'
   FSM.cpp
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,15): error C2039: 'vector': is not a member of 'std'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\iostream(19): message : see declaration of 'std'
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,21): error C2143: syntax error: missing ';' before '<'
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,21): error C2433: 'Scene::vector': 'virtual' not permitted on data declarations
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,21): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,45): error C2238: unexpected token(s) preceding ';'
   FSMChase.cpp
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,15): error C2039: 'vector': is not a member of 'std'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\iostream(19): message : see declaration of 'std'
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,21): error C2143: syntax error: missing ';' before '<'
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,21): error C2433: 'Scene::vector': 'virtual' not permitted on data declarations
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,21): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,45): error C2238: unexpected token(s) preceding ';'
   FSMFlee.cpp
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,15): error C2039: 'vector': is not a member of 'std'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\iostream(19): message : see declaration of 'std'
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,21): error C2143: syntax error: missing ';' before '<'
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,21): error C2433: 'Scene::vector': 'virtual' not permitted on data declarations
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,21): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,45): error C2238: unexpected token(s) preceding ';'
   FSMState.cpp
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,15): error C2039: 'vector': is not a member of 'std'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\iostream(19): message : see declaration of 'std'
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,21): error C2143: syntax error: missing ';' before '<'
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,21): error C2433: 'Scene::vector': 'virtual' not permitted on data declarations
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,21): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,45): error C2238: unexpected token(s) preceding ';'
+  FSMWander.cpp
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,15): error C2039: 'vector': is not a member of 'std'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\iostream(19): message : see declaration of 'std'
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,21): error C2143: syntax error: missing ';' before '<'
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,21): error C2433: 'Scene::vector': 'virtual' not permitted on data declarations
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,21): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,45): error C2238: unexpected token(s) preceding ';'
+  Graph.cpp
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,22): error C2065: 'Agent': undeclared identifier
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,28): error C2059: syntax error: '>'
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14): error C2062: type 'unknown-type' unexpected
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,45): error C2238: unexpected token(s) preceding ';'
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(11,66): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(11,49): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(17,71): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(17,52): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(19,79): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(19,60): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(20,64): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(20,45): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(20,19): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(25,69): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(25,50): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(27,77): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(27,58): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(28,62): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(28,43): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(28,19): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(31,69): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(31,50): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(33,77): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(33,58): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(34,62): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(34,43): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(34,19): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(39,71): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(39,52): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(41,79): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(41,60): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(42,64): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(42,45): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(42,19): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(47,73): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(47,52): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(49,81): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(49,60): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(50,66): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(50,45): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(50,19): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(53,73): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(53,52): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(55,81): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(55,60): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(56,66): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(56,45): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(56,19): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(60,73): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(60,52): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(62,81): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(62,60): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(63,66): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(63,45): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(63,19): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(66,73): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(66,52): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(68,81): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(68,60): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(69,66): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(69,45): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(69,19): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(73,70): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(73,53): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(74,59): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(74,42): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(74,117): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(74,100): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(74,76): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Graph.cpp(74,18): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Greedy.cpp
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,15): error C2039: 'vector': is not a member of 'std'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\iostream(19): message : see declaration of 'std'
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,21): error C2143: syntax error: missing ';' before '<'
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,21): error C2433: 'Scene::vector': 'virtual' not permitted on data declarations
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,21): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,45): error C2238: unexpected token(s) preceding ';'
+  Grid.cpp
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,22): error C2065: 'Agent': undeclared identifier
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,28): error C2059: syntax error: '>'
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14): error C2062: type 'unknown-type' unexpected
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,45): error C2238: unexpected token(s) preceding ';'
+  main.cpp
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,15): error C2039: 'vector': is not a member of 'std'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\iostream(19): message : see declaration of 'std'
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,21): error C2143: syntax error: missing ';' before '<'
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,21): error C2433: 'Scene::vector': 'virtual' not permitted on data declarations
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,21): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,45): error C2238: unexpected token(s) preceding ';'
+  PathFollowing.cpp
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,15): error C2039: 'vector': is not a member of 'std'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\iostream(19): message : see declaration of 'std'
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,21): error C2143: syntax error: missing ';' before '<'
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,21): error C2433: 'Scene::vector': 'virtual' not permitted on data declarations
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,21): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,45): error C2238: unexpected token(s) preceding ';'
+  SceneDecisionsMouse.cpp
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,22): error C2065: 'Agent': undeclared identifier
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,28): error C2059: syntax error: '>'
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14): error C2062: type 'unknown-type' unexpected
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,45): error C2238: unexpected token(s) preceding ';'
+  SDL_SimpleApp.cpp
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,15): error C2039: 'vector': is not a member of 'std'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\iostream(19): message : see declaration of 'std'
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,21): error C2143: syntax error: missing ';' before '<'
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,21): error C2433: 'Scene::vector': 'virtual' not permitted on data declarations
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,21): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,45): error C2238: unexpected token(s) preceding ';'
+  Seek.cpp
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,15): error C2039: 'vector': is not a member of 'std'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\iostream(19): message : see declaration of 'std'
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,21): error C2143: syntax error: missing ';' before '<'
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,21): error C2433: 'Scene::vector': 'virtual' not permitted on data declarations
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,21): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,45): error C2238: unexpected token(s) preceding ';'
   SensorySystem.cpp
-  Generando código...
-  SDL_Decisions.vcxproj -> H:\Proyectos\Visual Studio Projects\Framework (fundamentos IA)\AA4_DecisionMaking\bin\SDL_Decisions.exe
-
-Resumen del rendimiento del proyecto:
-     3442 ms H:\Proyectos\Visual Studio Projects\Framework (fundamentos IA)\AA4_DecisionMaking\SDL_Decisions\SDL_Decisions.vcxproj   1 llamadas
-               3442 ms Build                                      1 llamadas
-
-Resumen del rendimiento de destino:
-        0 ms AfterBuildCompileEvent                     1 llamadas
-        0 ms AfterLink                                  1 llamadas
-        0 ms ComputeLinkImportLibraryOutputsForClean    1 llamadas
-        0 ms PreLinkEvent                               1 llamadas
-        0 ms DoLinkOutputFilesMatch                     1 llamadas
-        0 ms PrepareResourceNames                       1 llamadas
-        0 ms CreateCustomManifestResourceNames          1 llamadas
-        0 ms ComputeLinkInputsFromProject               1 llamadas
-        0 ms ComputeCLGeneratedLinkInputs               1 llamadas
-        0 ms ComputeManifestGeneratedLinkerInputs       1 llamadas
-        0 ms _Link                                      1 llamadas
-        0 ms ComputeRCGeneratedLinkInputs               1 llamadas
-        0 ms BeforeLink                                 1 llamadas
-        0 ms BuildLinkTraverse                          1 llamadas
-        0 ms BuildCompile                               1 llamadas
-        0 ms _BuildCompileAction                        1 llamadas
-        0 ms _ResourceCompile                           1 llamadas
-        0 ms AfterResourceCompile                       1 llamadas
-        0 ms MakeDirsForResourceCompile                 1 llamadas
-        0 ms BeforeResourceCompile                      1 llamadas
-        0 ms _ClCompile                                 1 llamadas
-        0 ms ComputeRCOutputs                           1 llamadas
-        0 ms _ALink                                     1 llamadas
-        0 ms _Manifest                                  1 llamadas
-        0 ms ResolvedXDCMake                            1 llamadas
-        0 ms AfterBuild                                 1 llamadas
-        0 ms BuildLink                                  1 llamadas
-        0 ms _BuildLinkAction                           1 llamadas
-        0 ms PostBuildEvent                             1 llamadas
-        0 ms PrepareForRun                              1 llamadas
-        0 ms _CheckForCompileOutputs                    1 llamadas
-        0 ms _CopySourceItemsToOutputDirectory          1 llamadas
-        0 ms _GetCopyToOutputDirectoryItemsFromTransitiveProjectReferences   1 llamadas
-        0 ms GetCopyToOutputDirectoryXamlAppDefs        1 llamadas
-        0 ms _PopulateCommonStateForGetCopyToOutputDirectoryItems   1 llamadas
-        0 ms _Deploy                                    1 llamadas
-        0 ms _Appverifier                               1 llamadas
-        0 ms CreateSatelliteAssemblies                  1 llamadas
-        0 ms _GenerateSatelliteAssemblyInputs           1 llamadas
-        0 ms MakeDirsForFxc                             1 llamadas
-        0 ms BuiltProjectOutputGroup                    1 llamadas
-        0 ms _BscMake                                   1 llamadas
-        0 ms MakeDirsForBscMake                         1 llamadas
-        0 ms ComputeCLCompileGeneratedSbrFiles          1 llamadas
-        0 ms _XdcMake                                   1 llamadas
-        0 ms MakeDirsForXdcMake                         1 llamadas
-        0 ms AfterClCompile                             1 llamadas
-        0 ms MakeDirsForCl                              1 llamadas
-        0 ms Build                                      1 llamadas
-        0 ms _Xsd                                       1 llamadas
-        0 ms AssignProjectConfiguration                 1 llamadas
-        0 ms GetResolvedWinMD                           1 llamadas
-        0 ms SetTelemetryEnvironmentVariables           1 llamadas
-        0 ms _CheckWindowsSDKInstalled                  1 llamadas
-        0 ms ComputeCustomBuildOutput                   1 llamadas
-        0 ms SelectCustomBuild                          1 llamadas
-        0 ms _SelectedFiles                             1 llamadas
-        0 ms CopyFileToFolders                          1 llamadas
-        0 ms _SplitProjectReferencesByFileExistence     1 llamadas
-        0 ms PreBuildEvent                              1 llamadas
-        0 ms BeforeBuildGenerateSources                 1 llamadas
-        0 ms SetCABuildNativeEnvironmentVariables       1 llamadas
-        0 ms BeforeResolveReferences                    1 llamadas
-        0 ms ResolveReferences                          1 llamadas
-        0 ms ResolveSDKReferences                       1 llamadas
-        0 ms AfterResolveReferences                     1 llamadas
-        0 ms _PrepareForBuild                           1 llamadas
-        0 ms ExpandSDKReferences                        1 llamadas
-        0 ms ResolveAssemblyReferences                  1 llamadas
-        0 ms GetReferenceAssemblyPaths                  1 llamadas
-        0 ms ComputeReferenceCLInput                    1 llamadas
-        0 ms _AddOutputPathToGlobalPropertiesToRemove   1 llamadas
-        0 ms PrepareProjectReferences                   1 llamadas
-        0 ms GetReferencedVCProjectsInfo                1 llamadas
-        0 ms FindReferenceAssembliesForReferences       1 llamadas
-        0 ms ComputeCLInputPDBName                      1 llamadas
-        0 ms BeforeClCompile                            1 llamadas
-        0 ms BuildCompileTraverse                       1 llamadas
-        0 ms AddExternalIncludDirectoriesToPaths        1 llamadas
-        0 ms BuildGenerateSources                       1 llamadas
-        0 ms _BuildGenerateSourcesAction                1 llamadas
-        0 ms AfterBuildGenerateSourcesEvent             1 llamadas
-        0 ms AfterBuildGenerateSources                  1 llamadas
-        0 ms GetFrameworkPaths                          1 llamadas
-        0 ms _Midl                                      1 llamadas
-        0 ms AfterMidl                                  1 llamadas
-        0 ms ComputeMIDLGeneratedCompileInputs          1 llamadas
-        0 ms ResolveProjectReferences                   1 llamadas
-        1 ms MakeDirsForLink                            1 llamadas
-        1 ms InitializeBuildStatus                      1 llamadas
-        1 ms CopyFilesToOutputDirectory                 1 llamadas
-        1 ms _PrepareForReferenceResolution             1 llamadas
-        1 ms _GetCopyToOutputDirectoryItemsFromThisProject   1 llamadas
-        1 ms FinalizeBuildStatus                        1 llamadas
-        1 ms ComputeManifestInputsTargets               1 llamadas
-        1 ms ComputeCLOutputs                           1 llamadas
-        1 ms ComputeLinkSwitches                        1 llamadas
-        1 ms MakeDirsForMidl                            1 llamadas
-        1 ms CustomBuild                                1 llamadas
-        1 ms IncrementalClean                           1 llamadas
-        1 ms SelectClCompile                            1 llamadas
-        1 ms SetBuildDefaultEnvironmentVariables        1 llamadas
-        1 ms ComputeCLCompileGeneratedXDCFiles          1 llamadas
-        1 ms _GetProjectReferenceTargetFrameworkProperties   1 llamadas
-        1 ms ComputeLegacyManifestEmbedding             1 llamadas
-        1 ms BuildGenerateSourcesTraverse               1 llamadas
-        1 ms ContentFilesProjectOutputGroup             1 llamadas
-        1 ms RegisterOutput                             1 llamadas
-        2 ms GetCopyToOutputDirectoryItems              1 llamadas
-        2 ms SatelliteDllsProjectOutputGroup            1 llamadas
-        2 ms AssignTargetPaths                          1 llamadas
-        2 ms _CheckForInvalidConfigurationAndPlatform   1 llamadas
-        2 ms SplitResourcesByCulture                    1 llamadas
-        3 ms PrepareForBuild                            1 llamadas
-        3 ms _CleanGetCurrentAndPriorFileWrites         1 llamadas
-        6 ms WarnCompileDuplicatedFilename              1 llamadas
-       10 ms FixupCLCompileOptions                      1 llamadas
-       13 ms CreateRecipeFile                           1 llamadas
-      629 ms Link                                       1 llamadas
-     2746 ms ClCompile                                  1 llamadas
-
-Resumen del rendimiento de la tarea:
-        0 ms Message                                    3 llamadas
-        0 ms RemoveDuplicates                           2 llamadas
-        0 ms AssignProjectConfiguration                 1 llamadas
-        0 ms Touch                                      2 llamadas
-        0 ms MakeDir                                   10 llamadas
-        0 ms CheckVCToolsetVersion                      1 llamadas
-        0 ms ReadLinesFromFile                          2 llamadas
-        0 ms WriteLinesToFile                           1 llamadas
-        1 ms Delete                                     2 llamadas
-        1 ms GetOutOfDateItems                          3 llamadas
-        1 ms SetEnv                                     9 llamadas
-        1 ms ConvertToAbsolutePath                      1 llamadas
-        1 ms MSBuild                                    1 llamadas
-        1 ms FindUnderPath                              5 llamadas
-        1 ms AssignCulture                              1 llamadas
-        2 ms CallTarget                                 2 llamadas
-        2 ms CreateItem                                 2 llamadas
-        2 ms AssignTargetPath                           7 llamadas
-       12 ms GenerateDesktopDeployRecipe                1 llamadas
-      627 ms Link                                       1 llamadas
-     2743 ms CL                                         1 llamadas
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,15): error C2039: 'vector': is not a member of 'std'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\iostream(19): message : see declaration of 'std'
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,21): error C2143: syntax error: missing ';' before '<'
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,21): error C2433: 'Scene::vector': 'virtual' not permitted on data declarations
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,21): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(14,45): error C2238: unexpected token(s) preceding ';'
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\SensorySystem.cpp(5,31): error C2039: 'getAgents': is not a member of 'Scene'
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\Scene.h(6): message : see declaration of 'Scene'
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\SensorySystem.cpp(5,22): error C2143: syntax error: missing ';' before ':'
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\SensorySystem.cpp(5,42): error C2143: syntax error: missing ';' before ')'
+  Generating Code...

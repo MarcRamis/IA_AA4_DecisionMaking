@@ -19,6 +19,7 @@ public:
 	void update(float dtime, SDL_Event *event);
 	void draw();
 	const char* getTitle();
+	std::vector<Agent*> getAgents();
 private:
 	std::vector<Agent*> agents;
 	Vector2D coinPosition;
