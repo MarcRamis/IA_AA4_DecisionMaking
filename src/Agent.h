@@ -22,11 +22,12 @@ public:
 		virtual void applySteeringForce(Agent *agent, float dtime) {};
 	};
 
-	//SensorySystem sensors;
+	SensorySystem sensors;
 protected:
 	//Blackboard blackboard;
 
 private:
+	std::vector<Agent*> otherAgents;
 	SteeringBehavior *steering_behaviour;
 	//Pathfinder
 	//DecisionMakingAlgorithm* brain;
@@ -71,6 +72,7 @@ public:
 	void clearPath();
 	void update(float dtime, SDL_Event *event);
 	void draw();
-	bool Agent::loadSpriteTexture(char* filename, int num_frames=1);
-	
+	bool loadSpriteTexture(char* filename, int num_frames=1);
+	void setOtherAgents(std::vector<Agent*> _otherAgents);
+	std::vector<Agent*> getOtherAgents();
 };

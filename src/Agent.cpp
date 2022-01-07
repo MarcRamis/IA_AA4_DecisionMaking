@@ -91,7 +91,7 @@ void Agent::update(float dtime, SDL_Event *event)
 		break;
 	}
 
-	//sensors.Update(this, dtime);
+	sensors.Update(this, dtime);
 	//brain->Update(this, dtime);
 	steering_behaviour->applySteeringForce(this, dtime); // Apply the steering behavior
 	
@@ -196,4 +196,21 @@ bool Agent::loadSpriteTexture(char* filename, int _num_frames)
 		SDL_FreeSurface(image);
 
 	return true;
+}
+
+void Agent::setOtherAgents(std::vector<Agent*> _otherAgents)
+{
+	for (Agent* otherAgent : _otherAgents)
+	{
+		if (otherAgent->position != position)
+		{
+			otherAgents.push_back(otherAgent);
+		}
+	}
+
+}
+
+std::vector<Agent*> Agent::getOtherAgents()
+{
+	return otherAgents;
 }
