@@ -72,11 +72,40 @@ D:\UNI Projects\AA4_DecisionMaking\src\Graph.cpp(74,117): warning C4244: 'argume
 D:\UNI Projects\AA4_DecisionMaking\src\Graph.cpp(74,100): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
 D:\UNI Projects\AA4_DecisionMaking\src\Graph.cpp(74,76): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 D:\UNI Projects\AA4_DecisionMaking\src\Graph.cpp(74,18): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Greedy.cpp
+D:\UNI Projects\AA4_DecisionMaking\src\Greedy.cpp(13,47): error C2027: use of undefined type 'Graph'
+D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.h(4): message : see declaration of 'Graph'
+D:\UNI Projects\AA4_DecisionMaking\src\Greedy.cpp(13,103): error C2027: use of undefined type 'Graph'
+D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.h(4): message : see declaration of 'Graph'
+D:\UNI Projects\AA4_DecisionMaking\src\Greedy.cpp(22,6): error C2027: use of undefined type 'Graph'
+D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.h(4): message : see declaration of 'Graph'
+D:\UNI Projects\AA4_DecisionMaking\src\Greedy.cpp(22,90): error C2039: 'getGoal': is not a member of 'Blackboard'
+D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.h(7): message : see declaration of 'Blackboard'
+D:\UNI Projects\AA4_DecisionMaking\src\Greedy.cpp(33,7): error C2027: use of undefined type 'Graph'
+D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.h(4): message : see declaration of 'Graph'
+D:\UNI Projects\AA4_DecisionMaking\src\Greedy.cpp(35,36): error C2027: use of undefined type 'Graph'
+D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.h(4): message : see declaration of 'Graph'
+D:\UNI Projects\AA4_DecisionMaking\src\Greedy.cpp(35,134): error C2027: use of undefined type 'Graph'
+D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.h(4): message : see declaration of 'Graph'
+D:\UNI Projects\AA4_DecisionMaking\src\Greedy.cpp(35,164): error C2039: 'getGoal': is not a member of 'Blackboard'
+D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.h(7): message : see declaration of 'Blackboard'
+D:\UNI Projects\AA4_DecisionMaking\src\Greedy.cpp(35,207): error C2027: use of undefined type 'Graph'
+D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.h(4): message : see declaration of 'Graph'
+D:\UNI Projects\AA4_DecisionMaking\src\Greedy.cpp(35,247): error C2660: 'Greedy::ManhattanDistance': function does not take 1 arguments
+D:\UNI Projects\AA4_DecisionMaking\src\Greedy.h(16,8): message : see declaration of 'Greedy::ManhattanDistance'
+D:\UNI Projects\AA4_DecisionMaking\src\Greedy.cpp(36,36): error C2027: use of undefined type 'Graph'
+D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.h(4): message : see declaration of 'Graph'
+D:\UNI Projects\AA4_DecisionMaking\src\Greedy.cpp(37,50): error C2027: use of undefined type 'Graph'
+D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.h(4): message : see declaration of 'Graph'
+D:\UNI Projects\AA4_DecisionMaking\src\Greedy.cpp(56,54): error C2027: use of undefined type 'Graph'
+D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.h(4): message : see declaration of 'Graph'
+D:\UNI Projects\AA4_DecisionMaking\src\Greedy.cpp(60,33): error C2027: use of undefined type 'Graph'
+D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.h(4): message : see declaration of 'Graph'
   Grid.cpp
+  main.cpp
+  PathFindingAlgorithm.cpp
   PathFollowing.cpp
   SceneDecisionsMouse.cpp
   Seek.cpp
-  main.cpp
   Generating Code...
 D:\UNI Projects\AA4_DecisionMaking\src\Graph.cpp(122): warning C4715: 'Graph::getCurrentNodePosition': not all control paths return a value
-  SDL_Decisions.vcxproj -> D:\UNI Projects\AA4_DecisionMaking\bin\SDL_Decisions.exe

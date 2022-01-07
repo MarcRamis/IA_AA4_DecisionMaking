@@ -1,6 +1,4 @@
-
-#include "Node.h"
-class Agent;
+#include "Agent.h"
 
 class PathFindingAlgorithm
 {

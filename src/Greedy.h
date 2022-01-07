@@ -2,6 +2,7 @@
 #include <stack>
 
 #include "PathFindingAlgorithm.h"
+#include "Node.h"
 
 class Greedy : public PathFindingAlgorithm
 {
