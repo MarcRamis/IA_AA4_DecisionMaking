@@ -139,8 +139,12 @@
     <ClCompile Include="..\src\FSMFlee.cpp" />
     <ClCompile Include="..\src\FSMState.cpp" />
     <ClCompile Include="..\src\FSMWander.cpp" />
+    <ClCompile Include="..\src\Graph.cpp" />
+    <ClCompile Include="..\src\Greedy.cpp" />
     <ClCompile Include="..\src\Grid.cpp" />
     <ClCompile Include="..\src\main.cpp" />
+    <ClCompile Include="..\src\Node.cpp" />
+    <ClCompile Include="..\src\PathFindingAlgorithm.cpp" />
     <ClCompile Include="..\src\PathFollowing.cpp" />
     <ClCompile Include="..\src\SceneDecisionsMouse.cpp" />
     <ClCompile Include="..\src\SDL_SimpleApp.cpp" />
@@ -157,8 +161,12 @@
     <ClInclude Include="..\src\FSMFlee.h" />
     <ClInclude Include="..\src\FSMState.h" />
     <ClInclude Include="..\src\FSMWander.h" />
+    <ClInclude Include="..\src\Graph.h" />
+    <ClInclude Include="..\src\Greedy.h" />
     <ClInclude Include="..\src\Grid.h" />
+    <ClInclude Include="..\src\Node.h" />
     <ClInclude Include="..\src\Path.h" />
+    <ClInclude Include="..\src\PathFindingAlgorithm.h" />
     <ClInclude Include="..\src\PathFollowing.h" />
     <ClInclude Include="..\src\SceneDecisionsMouse.h" />
     <ClInclude Include="..\src\Seek.h" />

@@ -1,5 +1,4 @@
-#include "Agent.h"
-
+class Agent;
 class SensorySystem
 {
 private:

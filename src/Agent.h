@@ -9,7 +9,7 @@
 #include "utils.h"
 //#include "DecisionMakingAlgorithm.h"
 //#include "Blackboard.h"
-//#include "SensorySystem.h"
+#include "SensorySystem.h"
 
 class Agent
 {
