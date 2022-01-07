@@ -27,6 +27,7 @@ SceneDecisionsMouse::SceneDecisionsMouse()
 	agent = new Agent;
 	agent->loadSpriteTexture("../res/zombie2.png", 8);
 	agent->setBehavior(new PathFollowing);
+	agent->blackboard.setGraphPtr(maze);
 	agent->setTarget(Vector2D(-20, -20));
 	agents.push_back(agent);
 	// set agent position coords to the center of a random cell

@@ -8,8 +8,9 @@
 #include "Vector2D.h"
 #include "utils.h"
 //#include "DecisionMakingAlgorithm.h"
-//#include "Blackboard.h"
+#include "Blackboard.h"
 #include "SensorySystem.h"
+#include "PathFindingAlgorithm.h"
 
 class Agent
 {
@@ -23,8 +24,8 @@ public:
 	};
 
 	//SensorySystem sensors;
+	Blackboard blackboard;
 protected:
-	//Blackboard blackboard;
 
 private:
 	SteeringBehavior *steering_behaviour;
@@ -35,7 +36,7 @@ private:
 	Vector2D velocity;
 	Vector2D target;
 
-	// Pathfinding
+	PathFindingAlgorithm* pathfinder;
 	Path path;
 	int currentTargetIndex;
 
