@@ -4,6 +4,7 @@
 #include <SDL.h>
 #include <SDL_image.h>
 #include "SDL_SimpleApp.h"
+
 #include "Path.h"
 #include "Vector2D.h"
 #include "utils.h"
@@ -11,7 +12,7 @@
 #include "Blackboard.h"
 #include "SensorySystem.h"
 #include "PathFindingAlgorithm.h"
-
+	
 class Agent
 {
 public:

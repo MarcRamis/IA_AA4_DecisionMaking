@@ -1,5 +1,7 @@
-#pragma once
+
+#include "Node.h"
 class Agent;
+
 class PathFindingAlgorithm
 {
 protected:
@@ -11,4 +13,3 @@ public:
 	virtual ~PathFindingAlgorithm() {};
 	virtual void CalculatePath(Agent* agent) {};
 };
-

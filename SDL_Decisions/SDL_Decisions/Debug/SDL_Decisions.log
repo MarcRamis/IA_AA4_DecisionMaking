@@ -1,34 +1,4 @@
 ﻿  Agent.cpp
-  Blackboard.cpp
-D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.h(11,8): error C2143: syntax error: missing ';' before '*'
-D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.h(11,8): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.h(11,14): error C2238: unexpected token(s) preceding ';'
-D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.h(18,19): error C2061: syntax error: identifier 'Grid'
-D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.h(19,7): error C2143: syntax error: missing ';' before '*'
-D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.h(19,7): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.h(19,22): error C2238: unexpected token(s) preceding ';'
-D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.h(8,1): error C2011: 'Blackboard': 'class' type redefinition
-D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.h(7): message : see declaration of 'Blackboard'
-D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.cpp(3,13): error C2027: use of undefined type 'Blackboard'
-D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.h(7): message : see declaration of 'Blackboard'
-D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.cpp(4,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.cpp(5,1): warning C4508: '{ctor}': function should return a value; 'void' return type assumed
-D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.cpp(7,14): error C2027: use of undefined type 'Blackboard'
-D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.h(7): message : see declaration of 'Blackboard'
-D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.cpp(8,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.cpp(9,1): warning C4508: '{dtor}': function should return a value; 'void' return type assumed
-D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.cpp(11,18): error C2027: use of undefined type 'Blackboard'
-D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.h(7): message : see declaration of 'Blackboard'
-D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.cpp(13,2): error C2065: 'graph': undeclared identifier
-D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.cpp(16,20): error C2027: use of undefined type 'Blackboard'
-D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.h(7): message : see declaration of 'Blackboard'
-D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.cpp(18,9): error C2065: 'graph': undeclared identifier
-D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.cpp(21,18): error C2027: use of undefined type 'Blackboard'
-D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.h(7): message : see declaration of 'Blackboard'
-D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.cpp(23,2): error C2065: 'goal': undeclared identifier
-D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.cpp(26,23): error C2027: use of undefined type 'Blackboard'
-D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.h(7): message : see declaration of 'Blackboard'
-D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.cpp(28,9): error C2065: 'goal': undeclared identifier
   DecisionMakingAlgorithm.cpp
   FSM.cpp
   FSMChase.cpp
@@ -36,13 +6,6 @@ D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.cpp(28,9): error C2065: 'goal'
   FSMState.cpp
   FSMWander.cpp
   Graph.cpp
-D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.h(11,8): error C2143: syntax error: missing ';' before '*'
-D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.h(11,8): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.h(11,14): error C2238: unexpected token(s) preceding ';'
-D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.h(18,19): error C2061: syntax error: identifier 'Grid'
-D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.h(19,7): error C2143: syntax error: missing ';' before '*'
-D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.h(19,7): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.h(19,22): error C2238: unexpected token(s) preceding ';'
 D:\UNI Projects\AA4_DecisionMaking\src\Graph.cpp(11,66): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
 D:\UNI Projects\AA4_DecisionMaking\src\Graph.cpp(11,49): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
 D:\UNI Projects\AA4_DecisionMaking\src\Graph.cpp(17,71): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
@@ -109,14 +72,11 @@ D:\UNI Projects\AA4_DecisionMaking\src\Graph.cpp(74,117): warning C4244: 'argume
 D:\UNI Projects\AA4_DecisionMaking\src\Graph.cpp(74,100): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
 D:\UNI Projects\AA4_DecisionMaking\src\Graph.cpp(74,76): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 D:\UNI Projects\AA4_DecisionMaking\src\Graph.cpp(74,18): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  Greedy.cpp
   Grid.cpp
-D:\UNI Projects\AA4_DecisionMaking\src\Graph.h(13,8): error C2061: syntax error: identifier 'Grid'
-D:\UNI Projects\AA4_DecisionMaking\src\Graph.h(13,7): error C2535: 'Graph::Graph(void)': member function already defined or declared
-D:\UNI Projects\AA4_DecisionMaking\src\Graph.h(12): message : see declaration of 'Graph::Graph'
-D:\UNI Projects\AA4_DecisionMaking\src\Blackboard.h(18,19): error C2061: syntax error: identifier 'Grid'
-  main.cpp
   PathFollowing.cpp
   SceneDecisionsMouse.cpp
   Seek.cpp
+  main.cpp
   Generating Code...
+D:\UNI Projects\AA4_DecisionMaking\src\Graph.cpp(122): warning C4715: 'Graph::getCurrentNodePosition': not all control paths return a value
+  SDL_Decisions.vcxproj -> D:\UNI Projects\AA4_DecisionMaking\bin\SDL_Decisions.exe

@@ -1,8 +1,7 @@
-#include "Agent.h"
 #include <queue>
 #include <stack>
+
 #include "PathFindingAlgorithm.h"
-#include "Node.h"
 
 class Greedy : public PathFindingAlgorithm
 {

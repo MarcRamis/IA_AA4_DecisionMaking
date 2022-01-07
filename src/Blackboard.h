@@ -1,23 +1,19 @@
 #include <map>
 #include <string>
 
-#include "Vector2D.h"
-#include "Graph.h"
+class Graph;
+class Grid;
 
 class Blackboard
 {
 private:
 	//std::unordered_map<std::string, void> theBlackboard;
-	Graph *graph;
-	Vector2D* goal;
+	Graph* graph;
 
 public:
 	Blackboard();
 	~Blackboard();
 
-	void setGraphPtr(Grid* _grid);
+	void setGraphPtr(Graph* _graph);
 	Graph* getGraphPtr();
-
-	void setGoal(Vector2D *_goal);
-	Vector2D* getGoal();
 };

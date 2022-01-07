@@ -8,22 +8,12 @@ Blackboard::~Blackboard()
 {
 }
 
-void Blackboard::setGraphPtr(Grid* _grid)
+void Blackboard::setGraphPtr(Graph* _graph)
 {
-	graph = new Graph(_grid);
+	graph = _graph;
 }
 
 Graph* Blackboard::getGraphPtr()
 {
 	return graph;
-}
-
-void Blackboard::setGoal(Vector2D* _goal)
-{
-	goal = _goal;
-}
-
-Vector2D* Blackboard::getGoal()
-{
-	return goal;
 }
