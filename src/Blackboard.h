@@ -1,7 +1,7 @@
 #include <map>
 #include <string>
 
-class Graph;
+#include "Graph.h"
 
 class Blackboard
 {

@@ -1,5 +1,6 @@
-﻿  Agent.cpp
-  AStar.cpp
+﻿  AStar.cpp
+  Agent.cpp
+  Blackboard.cpp
   DecisionMakingAlgorithm.cpp
   FSM.cpp
   FSMChase.cpp
@@ -7,9 +8,10 @@
   FSMState.cpp
   FSMWander.cpp
   Greedy.cpp
-  main.cpp
   PathFollowing.cpp
   SceneDecisionsMouse.cpp
   Seek.cpp
+  main.cpp
   Generating Code...
+  LINK : D:\Uni Projects\IA\AA4_DecisionMaking\\bin\SDL_Decisions.exe not found or not built by the last incremental link; performing full link
   SDL_Decisions.vcxproj -> D:\Uni Projects\IA\AA4_DecisionMaking\bin\SDL_Decisions.exe

@@ -6,7 +6,6 @@
 #include "SDL_SimpleApp.h"
 #include "Vector2D.h"
 
-
 #include "Path.h"
 #include "utils.h"
 
