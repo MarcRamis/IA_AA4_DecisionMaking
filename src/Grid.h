@@ -4,7 +4,11 @@
 #include <sstream>
 #include <string>
 #include <time.h>
-#include "Agent.h"
+
+#include <SDL.h>
+#include <SDL_image.h>
+#include "SDL_SimpleApp.h"
+#include "Vector2D.h"
 
 class Grid
 {

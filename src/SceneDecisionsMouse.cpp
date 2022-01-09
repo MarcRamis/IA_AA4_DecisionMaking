@@ -4,13 +4,14 @@ using namespace std;
 
 SceneDecisionsMouse::SceneDecisionsMouse()
 {
+	srand((unsigned int)time(NULL)); // RANDOM
+	
+	//***** - MAZE - *****//
 	draw_grid = false;
 	maze = new Grid("../res/maze.csv");
-
 	loadTextures("../res/maze.png", "../res/coin.png");
 
-	srand((unsigned int)time(NULL));
-
+	//***** - PLAYER - *****//
 	Agent *agent = new Agent;
 	agent->loadSpriteTexture("../res/soldier.png", 4);
 	agent->setBehavior(new PathFollowing);
@@ -23,22 +24,33 @@ SceneDecisionsMouse::SceneDecisionsMouse()
 		rand_cell = Vector2D((float)(rand() % maze->getNumCellX()), (float)(rand() % maze->getNumCellY()));
 	agents[0]->setPosition(maze->cell2pix(rand_cell));
 
-	// Enemy
+	//***** - ENEMY - *****//
 	agent = new Agent;
 	agent->loadSpriteTexture("../res/zombie2.png", 8);
 	agent->setBehavior(new PathFollowing);
+	Graph* graph = new Graph(maze);
+	agent->blackboard.setGraphPtr(graph);
+	agent->SetPathfinder(new AStar);
 	agent->setTarget(Vector2D(-20, -20));
 	agents.push_back(agent);
+
 	// set agent position coords to the center of a random cell
 	rand_cell = Vector2D(-1,-1);
 	while (!maze->isValidCell(rand_cell))
 		rand_cell = Vector2D((float)(rand() % maze->getNumCellX()), (float)(rand() % maze->getNumCellY()));
 	agents[1]->setPosition(maze->cell2pix(rand_cell));
 
+	//***** - GUN/COIN - *****//
+
 	// set the coin in a random cell (but at least 3 cells far from the agent)
 	coinPosition = Vector2D(-1, -1);
 	while ((!maze->isValidCell(coinPosition)) || (Vector2D::Distance(coinPosition, rand_cell) < 3))
 		coinPosition = Vector2D((float)(rand() % maze->getNumCellX()), (float)(rand() % maze->getNumCellY()));
+
+	//***** - FIRST INIT CALCULATION - *****//
+	agents[1]->blackboard.setGoalPtr(&maze->cell2pix(coinPosition)); // aqui se cambia el goal del agent
+	agents[1]->getGraph()->Reset(); // un reset por si acaso aunque no es necesario lap rimera vez // BORRAR UNA VEZ COLOQUEMOS VARIAS INSTANCIAS PARA MIRAR EL CAMINO
+	agents[1]->GetPathfinder()->CalculatePath(agents[1]);
 }
 
 SceneDecisionsMouse::~SceneDecisionsMouse()

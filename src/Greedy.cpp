@@ -10,7 +10,7 @@ Greedy::~Greedy()
 
 void Greedy::CalculatePath(Agent* agent)
 {
-	/*Node* start = agent->getGraph()->getCurrentNodePosition(agent->getGraph()->pix2cell(agent->getPosition()));
+	Node* start = agent->getGraph()->getCurrentNodePosition(agent->getGraph()->pix2cell(agent->getPosition()));
 	frontier.push(start);
 	Node* currentNode = frontier.top();
 	currentNode->comeFrom = nullptr;
@@ -60,7 +60,7 @@ void Greedy::CalculatePath(Agent* agent)
 	agent->getGraph()->Reset();
 	counter++;
 	std::cout << counter << "- Explored nodes counter in Greedy: " << countFrontier << std::endl;
-	countFrontier = 0;*/
+	countFrontier = 0;
 }
 
 float Greedy::ManhattanDistance(Vector2D& n1, Vector2D& n2)

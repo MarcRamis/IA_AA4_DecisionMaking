@@ -4,16 +4,33 @@
 #include <SDL.h>
 #include <SDL_image.h>
 #include "SDL_SimpleApp.h"
-#include "Path.h"
 #include "Vector2D.h"
-#include "utils.h"
-//#include "DecisionMakingAlgorithm.h"
-//#include "Blackboard.h"
-#include "SensorySystem.h"
 
+#include "Path.h"
+#include "utils.h"
+
+//#include "DecisionMakingAlgorithm.h"
+//#include "SensorySystem.h"
+
+#include "Blackboard.h"
+
+#include "Graph.h"
+	
 class Agent
 {
 public:
+	class PathFindingAlgorithm
+	{
+	protected:
+		int countFrontier = 0;
+		int counter = 0;
+
+	public:
+		PathFindingAlgorithm() {};
+		virtual ~PathFindingAlgorithm() {};
+		virtual void CalculatePath(Agent* agent) {};
+	};
+
 	class SteeringBehavior
 	{
 	public:
@@ -22,12 +39,10 @@ public:
 		virtual void applySteeringForce(Agent *agent, float dtime) {};
 	};
 
-	SensorySystem sensors;
+	Blackboard blackboard;
 protected:
-	//Blackboard blackboard;
 
 private:
-	std::vector<Agent*> otherAgents;
 	SteeringBehavior *steering_behaviour;
 	//Pathfinder
 	//DecisionMakingAlgorithm* brain;
@@ -36,7 +51,7 @@ private:
 	Vector2D velocity;
 	Vector2D target;
 
-	// Pathfinding
+	PathFindingAlgorithm* pathfinder;
 	Path path;
 	int currentTargetIndex;
 
@@ -72,7 +87,11 @@ public:
 	void clearPath();
 	void update(float dtime, SDL_Event *event);
 	void draw();
-	bool loadSpriteTexture(char* filename, int num_frames=1);
-	void setOtherAgents(std::vector<Agent*> _otherAgents);
-	std::vector<Agent*> getOtherAgents();
+	bool Agent::loadSpriteTexture(char* filename, int num_frames=1);
+
+	Graph* getGraph() { return blackboard.getGraphPtr(); }
+	Vector2D getGoal() { return *blackboard.getGoalPtr(); }
+	
+	void SetPathfinder(PathFindingAlgorithm* _pathfinder) { pathfinder = _pathfinder; }
+	PathFindingAlgorithm* GetPathfinder() { return pathfinder; }
 };

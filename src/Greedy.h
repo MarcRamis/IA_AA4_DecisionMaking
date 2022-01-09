@@ -1,10 +1,10 @@
-#include "Agent.h"
+#pragma once
 #include <queue>
 #include <stack>
-#include "PathFindingAlgorithm.h"
-#include "Node.h"
 
-class Greedy : public PathFindingAlgorithm
+#include "Agent.h"
+
+class Greedy : public Agent::PathFindingAlgorithm
 {
 private:
 	std::priority_queue<Node*, std::vector<Node*>, Node::Heuristic> frontier;
