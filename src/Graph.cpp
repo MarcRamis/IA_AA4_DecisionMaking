@@ -75,6 +75,15 @@ Graph::Graph(Grid *grid)
 				nodes.push_back(tmpNode);
 				tmpNeighboursNodes.clear();
 			}
+			else
+			{
+				if ((j != 0 && j != grid->getNumCellX() - 1) && (i != 0 && i != grid->getNumCellY() - 1))
+				{
+					Node* tmpNode = new Node(Vector2D((unsigned int)j, (unsigned int)i));
+					nodesWall.push_back(tmpNode);
+				}
+				
+			}
 		}
 	}
 

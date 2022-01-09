@@ -20,6 +20,7 @@ public:
 
 
 	Node();
+	Node(Vector2D _pos);
 	Node(Vector2D _pos, float _weight);
 	Node(Vector2D _pos, std::vector<Node*> _neighbours, float _weight, float _initialWeight);
 	~Node();

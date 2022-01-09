@@ -7,7 +7,7 @@ class Graph
 
 private:
 	std::vector<Node*> nodes;
-
+	std::vector<Node*> nodesWall;
 public:
 	Graph();
 	Graph(Grid* grid);

@@ -4,6 +4,11 @@ Node::Node()
 {
 }
 
+Node::Node(Vector2D _pos)
+	: pos(_pos)
+{
+}
+
 Node::Node(Vector2D _pos, float _weight)
 	: pos(_pos), weight(_weight)
 {
