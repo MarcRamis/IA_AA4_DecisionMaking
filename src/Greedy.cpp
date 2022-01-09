@@ -10,7 +10,7 @@ Greedy::~Greedy()
 
 void Greedy::CalculatePath(Agent* agent)
 {
-	Node* start = agent->blackboard.getGraphPtr()->getCurrentNodePosition(agent->blackboard.getGraphPtr()->pix2cell(agent->getPosition()));
+	Node* start = agent->getGraph()->getCurrentNodePosition(agent->getGraph()->pix2cell(agent->getPosition()));
 	frontier.push(start);
 	Node* currentNode = frontier.top();
 	currentNode->comeFrom = nullptr;
@@ -19,7 +19,7 @@ void Greedy::CalculatePath(Agent* agent)
 		currentNode = frontier.top();
 		frontier.pop();
 
-		if ((agent->blackboard.getGraphPtr()->cell2pix(currentNode->pos) == *agent->blackboard.getGoal()))
+		if ((agent->getGraph()->cell2pix(currentNode->pos) == agent->getGoal()))
 		{
 			while (!frontier.empty())
 			{
@@ -30,11 +30,11 @@ void Greedy::CalculatePath(Agent* agent)
 
 		for (Node* next : currentNode->neighbours)
 		{
-			if (agent->blackboard.getGraphPtr()->getCurrentNodePosition(next->pos)->comeFrom == nullptr)
+			if (agent->getGraph()->getCurrentNodePosition(next->pos)->comeFrom == nullptr)
 			{
-				agent->blackboard.getGraphPtr()->getCurrentNodePosition(next->pos)->heuristic = ManhattanDistance(agent->blackboard.getGraphPtr()->pix2cell(*agent->blackboard.getGoal()), agent->blackboard.getGraphPtr()->getCurrentNodePosition(next->pos)->pos);
-				agent->blackboard.getGraphPtr()->getCurrentNodePosition(next->pos)->comeFrom = currentNode;
-				frontier.push(agent->blackboard.getGraphPtr()->getCurrentNodePosition(next->pos));
+				agent->getGraph()->getCurrentNodePosition(next->pos)->heuristic = ManhattanDistance(agent->getGraph()->pix2cell(agent->getGoal()), agent->getGraph()->getCurrentNodePosition(next->pos)->pos);
+				agent->getGraph()->getCurrentNodePosition(next->pos)->comeFrom = currentNode;
+				frontier.push(agent->getGraph()->getCurrentNodePosition(next->pos));
 				countFrontier++;
 			}
 		}
@@ -53,11 +53,11 @@ void Greedy::CalculatePath(Agent* agent)
 
 	while (path.size() != 0)
 	{
-		agent->addPathPoint(agent->blackboard.getGraphPtr()->cell2pix(path.top()->pos));
+		agent->addPathPoint(agent->getGraph()->cell2pix(path.top()->pos));
 		path.pop();
 	}
 
-	agent->blackboard.getGraphPtr()->Reset();
+	agent->getGraph()->Reset();
 	counter++;
 	std::cout << counter << "- Explored nodes counter in Greedy: " << countFrontier << std::endl;
 	countFrontier = 0;

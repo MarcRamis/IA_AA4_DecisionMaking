@@ -2,7 +2,6 @@
 #include <string>
 
 class Graph;
-class Grid;
 
 class Blackboard
 {

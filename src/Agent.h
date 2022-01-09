@@ -4,18 +4,34 @@
 #include <SDL.h>
 #include <SDL_image.h>
 #include "SDL_SimpleApp.h"
+#include "Vector2D.h"
+
 
 #include "Path.h"
-#include "Vector2D.h"
 #include "utils.h"
+
 //#include "DecisionMakingAlgorithm.h"
+//#include "SensorySystem.h"
+
 #include "Blackboard.h"
-#include "SensorySystem.h"
-#include "PathFindingAlgorithm.h"
+
+#include "Graph.h"
 	
 class Agent
 {
 public:
+	class PathFindingAlgorithm
+	{
+	protected:
+		int countFrontier = 0;
+		int counter = 0;
+
+	public:
+		PathFindingAlgorithm() {};
+		virtual ~PathFindingAlgorithm() {};
+		virtual void CalculatePath(Agent* agent) {};
+	};
+
 	class SteeringBehavior
 	{
 	public:
@@ -25,6 +41,7 @@ public:
 	};
 
 	//SensorySystem sensors;
+	
 	Blackboard blackboard;
 protected:
 
@@ -74,5 +91,7 @@ public:
 	void update(float dtime, SDL_Event *event);
 	void draw();
 	bool Agent::loadSpriteTexture(char* filename, int num_frames=1);
-	
+
+	Graph* getGraph() { return blackboard.getGraphPtr(); }
+	Vector2D getGoal() { return Vector2D(0.f, 0.f); }
 };
