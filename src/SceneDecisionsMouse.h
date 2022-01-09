@@ -10,6 +10,8 @@
 #include "Seek.h"
 #include "PathFollowing.h"
 #include "Grid.h"
+#include "AStar.h"
+#include "Greedy.h"
 
 class SceneDecisionsMouse :
 	public Scene

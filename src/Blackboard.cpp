@@ -17,3 +17,13 @@ Graph* Blackboard::getGraphPtr()
 {
 	return graph;
 }
+
+void Blackboard::setGoalPtr(Vector2D* _goal)
+{
+	goal = _goal;
+}
+
+Vector2D* Blackboard::getGoalPtr()
+{
+	return goal;
+}

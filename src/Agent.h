@@ -92,5 +92,8 @@ public:
 	bool Agent::loadSpriteTexture(char* filename, int num_frames=1);
 
 	Graph* getGraph() { return blackboard.getGraphPtr(); }
-	Vector2D getGoal() { return Vector2D(0.f, 0.f); }
+	Vector2D getGoal() { return *blackboard.getGoalPtr(); }
+	
+	void SetPathfinder(PathFindingAlgorithm* _pathfinder) { pathfinder = _pathfinder; }
+	PathFindingAlgorithm* GetPathfinder() { return pathfinder; }
 };
