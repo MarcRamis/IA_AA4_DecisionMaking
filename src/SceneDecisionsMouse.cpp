@@ -47,6 +47,7 @@ SceneDecisionsMouse::SceneDecisionsMouse()
 	while ((!maze->isValidCell(coinPosition)) || (Vector2D::Distance(coinPosition, rand_cell) < 3))
 		coinPosition = Vector2D((float)(rand() % maze->getNumCellX()), (float)(rand() % maze->getNumCellY()));
 
+	//***** - FIRST INIT CALCULATION - *****//
 	agents[1]->blackboard.setGoalPtr(&maze->cell2pix(coinPosition)); // aqui se cambia el goal del agent
 	agents[1]->getGraph()->Reset(); // un reset por si acaso aunque no es necesario lap rimera vez // BORRAR UNA VEZ COLOQUEMOS VARIAS INSTANCIAS PARA MIRAR EL CAMINO
 	agents[1]->GetPathfinder()->CalculatePath(agents[1]);
