@@ -92,7 +92,7 @@ void Agent::update(float dtime, SDL_Event *event)
 	}
 
 	//sensors.Update(this, dtime);
-	//brain->Update(this, dtime);
+	if(brain != nullptr) brain->Update(this, dtime);
 	steering_behaviour->applySteeringForce(this, dtime); // Apply the steering behavior
 	
 	// Update orientation

@@ -45,9 +45,6 @@
     <ClCompile Include="..\src\Blackboard.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\DecisionMakingAlgorithm.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\FSM.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -111,9 +108,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\src\Blackboard.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\DecisionMakingAlgorithm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\src\FSM.h">

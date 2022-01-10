@@ -12,6 +12,8 @@
 #include "Grid.h"
 #include "AStar.h"
 #include "Greedy.h"
+#include "FSM.h"
+#include "FSMWander.h"
 
 class SceneDecisionsMouse :
 	public Scene

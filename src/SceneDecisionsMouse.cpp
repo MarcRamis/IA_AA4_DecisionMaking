@@ -32,6 +32,7 @@ SceneDecisionsMouse::SceneDecisionsMouse()
 	agent->blackboard.setGraphPtr(graph);
 	agent->SetPathfinder(new AStar);
 	agent->setTarget(Vector2D(-20, -20));
+	agent->SetBrain(new FSM(new FSMWander));
 	agents.push_back(agent);
 
 	// set agent position coords to the center of a random cell
