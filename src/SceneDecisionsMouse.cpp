@@ -9,13 +9,16 @@ SceneDecisionsMouse::SceneDecisionsMouse()
 	//***** - MAZE - *****//
 	draw_grid = false;
 	maze = new Grid("../res/maze.csv");
-	loadTextures("../res/maze.png", "../res/coin.png");
+	loadTextures("../res/maze.png", "../res/gun.png");
+	Graph* graph = new Graph(maze);
 
 	//***** - PLAYER - *****//
 	Agent *agent = new Agent;
 	agent->loadSpriteTexture("../res/soldier.png", 4);
 	agent->setBehavior(new PathFollowing);
 	agent->setTarget(Vector2D(-20,-20));
+	agent->blackboard.setGraphPtr(graph);
+	agent->SetPathfinder(new AStar);
 	agents.push_back(agent);
 
 	// set agent position coords to the center of a random cell
@@ -28,7 +31,6 @@ SceneDecisionsMouse::SceneDecisionsMouse()
 	agent = new Agent;
 	agent->loadSpriteTexture("../res/zombie2.png", 8);
 	agent->setBehavior(new PathFollowing);
-	Graph* graph = new Graph(maze);
 	agent->blackboard.setGraphPtr(graph);
 	agent->blackboard.setMazePtr(maze);
 	agent->SetPathfinder(new AStar);
@@ -86,7 +88,10 @@ void SceneDecisionsMouse::update(float dtime, SDL_Event *event)
 		{
 			Vector2D cell = maze->pix2cell(Vector2D((float)(event->button.x), (float)(event->button.y)));
 			if (maze->isValidCell(cell)) {
-				agents[0]->addPathPoint(maze->cell2pix(cell));
+
+				agents[0]->setGoal(maze->cell2pix(cell));
+				agents[0]->clearPath();
+				agents[0]->CalculatePath();
 			}
 		}
 		break;
