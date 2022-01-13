@@ -198,11 +198,10 @@ bool Agent::loadSpriteTexture(char* filename, int _num_frames)
 	return true;
 }
 
-void Agent::CalculatePath(Vector2D position)
+void Agent::CalculatePath()
 {
-	blackboard.setGoalPtr(&position);
 	getGraph()->Reset(); 
-	GetPathfinder()->CalculatePath(this);
+	pathfinder->CalculatePath(this);
 }
 
 Vector2D Agent::cell2pix(Vector2D cell)

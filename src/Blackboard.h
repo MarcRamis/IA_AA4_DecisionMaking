@@ -8,7 +8,7 @@ class Blackboard
 private:
 	//std::unordered_map<std::string, void> theBlackboard;
 	Graph* graph;
-	Vector2D* goal;
+	Grid* maze;
 	Vector2D* screenSizeCell;
 
 public:
@@ -17,10 +17,7 @@ public:
 
 	void setGraphPtr(Graph* _graph);
 	Graph* getGraphPtr();
-	
-	void setGoalPtr(Vector2D* _goal);
-	Vector2D* getGoalPtr();
 
-	void setScreenSizeCell(Vector2D* screenSizeCell);
-	Vector2D *getScreenSizeCell();
+	void setMazePtr(Grid* _grid);
+	Grid* getMazePtr();
 };

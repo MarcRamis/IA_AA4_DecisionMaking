@@ -18,22 +18,12 @@ Graph* Blackboard::getGraphPtr()
 	return graph;
 }
 
-void Blackboard::setGoalPtr(Vector2D *_goal)
+void Blackboard::setMazePtr(Grid* _grid)
 {
-	goal = _goal;
+	maze = _grid;
 }
 
-Vector2D* Blackboard::getGoalPtr()
+Grid* Blackboard::getMazePtr()
 {
-	return goal;
-}
-
-void Blackboard::setScreenSizeCell(Vector2D* _screenSizeCell)
-{
-	screenSizeCell = _screenSizeCell;
-}
-
-Vector2D* Blackboard::getScreenSizeCell()
-{
-	return screenSizeCell;
+	return maze;
 }

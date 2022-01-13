@@ -2,19 +2,29 @@
 
 void FSMWander::Enter(Agent* agent, float dtime)
 {
-    // Get Random position in world
-    agent->CalculatePath(*agent->blackboard.getGoalPtr());
+    Vector2D newPosition(-1, -1);
+    while (!agent->blackboard.getMazePtr()->isValidCell(newPosition))
+        newPosition = Vector2D((float)(rand() % agent->blackboard.getMazePtr()->getNumCellX()), (float)(rand() % agent->blackboard.getMazePtr()->getNumCellY()));
+
+    agent->setGoal(agent->cell2pix(newPosition));
+    agent->clearPath();
+    agent->CalculatePath();
+
     std::cout << "Wander Enter" << std::endl;
 }
 
 FSMState* FSMWander::Update(Agent* agent, float dtime)
 {
     std::cout << "Wander Update" << std::endl;
-    if (Vector2D::Distance(*agent->blackboard.getGoalPtr(), agent->pix2cell(agent->getPosition())) < 3) {
+    if (Vector2D::Distance(agent->getGoal(), agent->getPosition()) < 3) {
 
-        Vector2D *newPosition = agent->blackboard.getScreenSizeCell();
-        agent->blackboard.setGoalPtr(newPosition);
-        agent->CalculatePath(*agent->blackboard.getGoalPtr());
+        Vector2D newPosition(-1, -1);
+        while (!agent->blackboard.getMazePtr()->isValidCell(newPosition))
+            newPosition = Vector2D((float)(rand() % agent->blackboard.getMazePtr()->getNumCellX()), (float)(rand() % agent->blackboard.getMazePtr()->getNumCellY()));
+
+        agent->setGoal(agent->cell2pix(newPosition));
+        agent->clearPath();
+        agent->CalculatePath();
     }
 
     return nullptr;

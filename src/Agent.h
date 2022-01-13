@@ -58,6 +58,7 @@ private:
 	Vector2D position;
 	Vector2D velocity;
 	Vector2D target;
+	Vector2D goal;
 
 	Path path;
 	int currentTargetIndex;
@@ -97,7 +98,8 @@ public:
 	bool Agent::loadSpriteTexture(char* filename, int num_frames=1);
 
 	Graph* getGraph() { return blackboard.getGraphPtr(); }
-	Vector2D getGoal() { return *blackboard.getGoalPtr(); }
+	void setGoal(Vector2D _goal) { goal = _goal; }
+	Vector2D getGoal() { return goal; }
 	
 	void SetPathfinder(PathFindingAlgorithm* _pathfinder) { pathfinder = _pathfinder; }
 	PathFindingAlgorithm* GetPathfinder() { return pathfinder; }
@@ -108,5 +110,5 @@ public:
 	Vector2D cell2pix(Vector2D cell);
 	Vector2D pix2cell(Vector2D pix);
 
-	void CalculatePath(Vector2D position);
+	void CalculatePath();
 };

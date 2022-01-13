@@ -30,7 +30,7 @@ SceneDecisionsMouse::SceneDecisionsMouse()
 	agent->setBehavior(new PathFollowing);
 	Graph* graph = new Graph(maze);
 	agent->blackboard.setGraphPtr(graph);
-	agent->blackboard.setScreenSizeCell(new Vector2D(maze->getNumCellX(), maze->getNumCellY()));
+	agent->blackboard.setMazePtr(maze);
 	agent->SetPathfinder(new AStar);
 	agent->setTarget(Vector2D(-20, -20));
 	agent->SetBrain(new FSM(new FSMWander));
@@ -39,10 +39,17 @@ SceneDecisionsMouse::SceneDecisionsMouse()
 	rand_cell = Vector2D(-1,-1);
 	while (!maze->isValidCell(rand_cell))
 		rand_cell = Vector2D((float)(rand() % maze->getNumCellX()), (float)(rand() % maze->getNumCellY()));
+	
 	agent->setPosition(maze->cell2pix(rand_cell));
-	agent->blackboard.setGoalPtr(&agent->cell2pix(Vector2D((float)(rand() % maze->getNumCellX()), (float)(rand() % maze->getNumCellY()))));
-	agent->CalculatePath(*agent->blackboard.getGoalPtr());
 
+	// set agent position initial to go
+	rand_cell = Vector2D(-1, -1);
+	while (!maze->isValidCell(rand_cell))
+		rand_cell = Vector2D((float)(rand() % maze->getNumCellX()), (float)(rand() % maze->getNumCellY()));
+
+	agent->setGoal(agent->cell2pix(rand_cell));
+	agent->clearPath();
+	agent->CalculatePath();
 	agents.push_back(agent);
 	
 	//***** - GUN/COIN - *****//
