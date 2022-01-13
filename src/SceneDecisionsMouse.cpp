@@ -92,6 +92,8 @@ void SceneDecisionsMouse::update(float dtime, SDL_Event *event)
 				agents[0]->setGoal(maze->cell2pix(cell));
 				agents[0]->clearPath();
 				agents[0]->CalculatePath();
+
+				agents[0]->blackboard.hasGun = true;
 			}
 		}
 		break;

@@ -1,5 +1,8 @@
 #pragma once
-#include "FSMState.h"
+
+//class FSMFlee;
+#include "FSMState.h";
+
 class FSMWander : public FSMState
  {
 public:

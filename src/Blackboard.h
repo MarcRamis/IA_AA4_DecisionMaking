@@ -10,6 +10,7 @@ private:
 	Graph* graph;
 	Grid* maze;
 	Vector2D* screenSizeCell;
+	
 
 public:
 	Blackboard();
@@ -20,4 +21,6 @@ public:
 
 	void setMazePtr(Grid* _grid);
 	Grid* getMazePtr();
+
+	bool hasGun;
 };

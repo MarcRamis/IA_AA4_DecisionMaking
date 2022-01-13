@@ -1,2 +1,8 @@
 ﻿  FSMWander.cpp
-  SDL_Decisions.vcxproj -> C:\Users\marc.ramis\Desktop\AA4_DecisionMaking\bin\SDL_Decisions.exe
+D:\Uni Projects\IA\AA4_DecisionMaking\src\FSMWander.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  main.cpp
+D:\Uni Projects\IA\AA4_DecisionMaking\src\FSMWander.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  SceneDecisionsMouse.cpp
+D:\Uni Projects\IA\AA4_DecisionMaking\src\FSMWander.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  Generating Code...
+  SDL_Decisions.vcxproj -> D:\Uni Projects\IA\AA4_DecisionMaking\bin\SDL_Decisions.exe

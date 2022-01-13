@@ -1,5 +1,4 @@
 #include "FSMFlee.h"
-
 void FSMFlee::Enter(Agent* agent, float dtime)
 {
 }
