@@ -103,4 +103,10 @@ public:
 	PathFindingAlgorithm* GetPathfinder() { return pathfinder; }
 	
 	void SetBrain(DecisionMakingAlgorithm* _brain) { brain = _brain; }
+	DecisionMakingAlgorithm* GetBrain() { return brain; }
+
+	Vector2D cell2pix(Vector2D cell);
+	Vector2D pix2cell(Vector2D pix);
+
+	void CalculatePath(Vector2D position);
 };

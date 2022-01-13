@@ -30,28 +30,26 @@ SceneDecisionsMouse::SceneDecisionsMouse()
 	agent->setBehavior(new PathFollowing);
 	Graph* graph = new Graph(maze);
 	agent->blackboard.setGraphPtr(graph);
+	agent->blackboard.setScreenSizeCell(new Vector2D(maze->getNumCellX(), maze->getNumCellY()));
 	agent->SetPathfinder(new AStar);
 	agent->setTarget(Vector2D(-20, -20));
 	agent->SetBrain(new FSM(new FSMWander));
-	agents.push_back(agent);
-
+	
 	// set agent position coords to the center of a random cell
 	rand_cell = Vector2D(-1,-1);
 	while (!maze->isValidCell(rand_cell))
 		rand_cell = Vector2D((float)(rand() % maze->getNumCellX()), (float)(rand() % maze->getNumCellY()));
-	agents[1]->setPosition(maze->cell2pix(rand_cell));
+	agent->setPosition(maze->cell2pix(rand_cell));
+	agent->blackboard.setGoalPtr(&agent->cell2pix(Vector2D((float)(rand() % maze->getNumCellX()), (float)(rand() % maze->getNumCellY()))));
+	agent->CalculatePath(*agent->blackboard.getGoalPtr());
 
+	agents.push_back(agent);
+	
 	//***** - GUN/COIN - *****//
-
 	// set the coin in a random cell (but at least 3 cells far from the agent)
 	coinPosition = Vector2D(-1, -1);
 	while ((!maze->isValidCell(coinPosition)) || (Vector2D::Distance(coinPosition, rand_cell) < 3))
-		coinPosition = Vector2D((float)(rand() % maze->getNumCellX()), (float)(rand() % maze->getNumCellY()));
-
-	//***** - FIRST INIT CALCULATION - *****//
-	agents[1]->blackboard.setGoalPtr(&maze->cell2pix(coinPosition)); // aqui se cambia el goal del agent
-	agents[1]->getGraph()->Reset(); // un reset por si acaso aunque no es necesario lap rimera vez // BORRAR UNA VEZ COLOQUEMOS VARIAS INSTANCIAS PARA MIRAR EL CAMINO
-	agents[1]->GetPathfinder()->CalculatePath(agents[1]);
+		coinPosition = Vector2D((float)(rand() % maze->getNumCellX()), (float)(rand() % maze->getNumCellY()));	
 }
 
 SceneDecisionsMouse::~SceneDecisionsMouse()

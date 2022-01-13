@@ -18,7 +18,7 @@ Graph* Blackboard::getGraphPtr()
 	return graph;
 }
 
-void Blackboard::setGoalPtr(Vector2D* _goal)
+void Blackboard::setGoalPtr(Vector2D *_goal)
 {
 	goal = _goal;
 }
@@ -26,4 +26,14 @@ void Blackboard::setGoalPtr(Vector2D* _goal)
 Vector2D* Blackboard::getGoalPtr()
 {
 	return goal;
+}
+
+void Blackboard::setScreenSizeCell(Vector2D* _screenSizeCell)
+{
+	screenSizeCell = _screenSizeCell;
+}
+
+Vector2D* Blackboard::getScreenSizeCell()
+{
+	return screenSizeCell;
 }
