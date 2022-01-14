@@ -1,2 +1,15 @@
-﻿  SensorySystem.cpp
+﻿  Agent.cpp
+  AStar.cpp
+  Blackboard.cpp
+  FSM.cpp
+  FSMChase.cpp
+D:\Uni Projects\IA\AA4_DecisionMaking\src\FSMWander.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  FSMFlee.cpp
+D:\Uni Projects\IA\AA4_DecisionMaking\src\FSMWander.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  FSMState.cpp
+  FSMWander.cpp
+D:\Uni Projects\IA\AA4_DecisionMaking\src\FSMWander.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  main.cpp
+D:\Uni Projects\IA\AA4_DecisionMaking\src\FSMWander.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  Generating Code...
   SDL_Decisions.vcxproj -> D:\Uni Projects\IA\AA4_DecisionMaking\bin\SDL_Decisions.exe
