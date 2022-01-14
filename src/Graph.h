@@ -14,6 +14,7 @@ public:
 	~Graph();
 	   
 	std::vector<Node*> getNodes();
+	std::vector<Node*> getNodesWall();
 	Node* getCurrentNodePosition(Vector2D target);
 	void ChangeWeight(Vector2D target);
 	void SetWeightFromCurrentNodePosition(Vector2D target);

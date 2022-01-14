@@ -15,7 +15,6 @@ public:
 	virtual void draw() = 0;
 	virtual const char* getTitle() { return ""; };
 
-protected:
 	std::vector<Agent*> agents;
 };
 

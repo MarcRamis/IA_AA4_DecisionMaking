@@ -175,6 +175,14 @@ void SceneDecisionsMouse::drawMaze()
 			
 		}
 	}
+	for (Node* wall : agents[1]->getGraph()->getNodesWall())
+	{
+		SDL_SetRenderDrawColor(TheApp::Instance()->getRenderer(), 0, 255, 0, 255);
+		Vector2D tempVec = agents[1]->cell2pix(Vector2D(wall->pos.x, wall->pos.y));
+		SDL_RenderDrawLine(TheApp::Instance()->getRenderer(), (int)tempVec.x - CELL_SIZE/2, (int)tempVec.y - CELL_SIZE / 2, (int)tempVec.x + CELL_SIZE / 2, (int)tempVec.y + CELL_SIZE / 2);
+		SDL_RenderDrawLine(TheApp::Instance()->getRenderer(), (int)tempVec.x + CELL_SIZE / 2, (int)tempVec.y - CELL_SIZE / 2, (int)tempVec.x - CELL_SIZE / 2, (int)tempVec.y + CELL_SIZE / 2);
+	}
+	
 	//Alternative: render a backgroud texture:
 	//SDL_RenderCopy(TheApp::Instance()->getRenderer(), background_texture, NULL, NULL );
 }
