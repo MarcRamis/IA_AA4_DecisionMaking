@@ -92,7 +92,7 @@ void Agent::update(float dtime, SDL_Event *event)
 	}
 
 	//sensors.Update(this, dtime);
-	//brain->Update(this, dtime);
+	if(brain != nullptr) brain->Update(this, dtime);
 	steering_behaviour->applySteeringForce(this, dtime); // Apply the steering behavior
 	
 	// Update orientation
@@ -196,4 +196,21 @@ bool Agent::loadSpriteTexture(char* filename, int _num_frames)
 		SDL_FreeSurface(image);
 
 	return true;
+}
+
+void Agent::CalculatePath()
+{
+	getGraph()->Reset(); 
+	pathfinder->CalculatePath(this);
+}
+
+Vector2D Agent::cell2pix(Vector2D cell)
+{
+	int offset = CELL_SIZE / 2;
+	return Vector2D(cell.x * CELL_SIZE + offset, cell.y * CELL_SIZE + offset);
+}
+
+Vector2D Agent::pix2cell(Vector2D pix)
+{
+	return Vector2D((float)((int)pix.x / CELL_SIZE), (float)((int)pix.y / CELL_SIZE));
 }

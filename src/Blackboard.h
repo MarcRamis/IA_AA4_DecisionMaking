@@ -2,13 +2,19 @@
 #include <string>
 
 #include "Graph.h"
+#include "Timer.h"
 
 class Blackboard
 {
 private:
-	//std::unordered_map<std::string, void> theBlackboard;
 	Graph* graph;
-	Vector2D* goal;
+	Grid* maze;
+	bool* enemyHasGun;
+	bool *enemySpotted;
+	
+	Timer gunTimer;
+	int counter = 0;
+	double test, test2;
 
 public:
 	Blackboard();
@@ -16,7 +22,16 @@ public:
 
 	void setGraphPtr(Graph* _graph);
 	Graph* getGraphPtr();
-	
-	void setGoalPtr(Vector2D* _goal);
-	Vector2D* getGoalPtr();
+
+	void setMazePtr(Grid* _grid);
+	Grid* getMazePtr();
+
+	void setGun(bool _hasGun);
+	bool getGun();
+
+	void StartGunTimer();
+	void ResetGun();
+
+	void setEnemySpotted(bool _EnemySpotted);
+	bool getEnemySpotted();
 };

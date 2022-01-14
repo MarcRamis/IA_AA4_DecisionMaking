@@ -9,15 +9,18 @@ SceneDecisionsMouse::SceneDecisionsMouse()
 	//***** - MAZE - *****//
 	draw_grid = false;
 	maze = new Grid("../res/maze.csv");
-	loadTextures("../res/maze.png", "../res/coin.png");
-
+	loadTextures("../res/maze.png", "../res/gun.png");
+	Graph* graph = new Graph(maze);
+	
 	//***** - PLAYER - *****//
 	Agent *agent = new Agent;
 	agent->loadSpriteTexture("../res/soldier.png", 4);
 	agent->setBehavior(new PathFollowing);
 	agent->setTarget(Vector2D(-20,-20));
+	agent->blackboard.setGraphPtr(graph);
+	agent->SetPathfinder(new AStar);
 	agents.push_back(agent);
-
+	
 	// set agent position coords to the center of a random cell
 	Vector2D rand_cell(-1,-1);
 	while (!maze->isValidCell(rand_cell))
@@ -28,29 +31,34 @@ SceneDecisionsMouse::SceneDecisionsMouse()
 	agent = new Agent;
 	agent->loadSpriteTexture("../res/zombie2.png", 8);
 	agent->setBehavior(new PathFollowing);
-	Graph* graph = new Graph(maze);
 	agent->blackboard.setGraphPtr(graph);
+	agent->blackboard.setMazePtr(maze);
 	agent->SetPathfinder(new AStar);
 	agent->setTarget(Vector2D(-20, -20));
-	agents.push_back(agent);
-
+	agent->SetBrain(new FSM(new FSMWander));
+	
 	// set agent position coords to the center of a random cell
 	rand_cell = Vector2D(-1,-1);
 	while (!maze->isValidCell(rand_cell))
 		rand_cell = Vector2D((float)(rand() % maze->getNumCellX()), (float)(rand() % maze->getNumCellY()));
-	agents[1]->setPosition(maze->cell2pix(rand_cell));
+	
+	agent->setPosition(maze->cell2pix(rand_cell));
 
+	// set agent position initial to go
+	rand_cell = Vector2D(-1, -1);
+	while (!maze->isValidCell(rand_cell))
+		rand_cell = Vector2D((float)(rand() % maze->getNumCellX()), (float)(rand() % maze->getNumCellY()));
+
+	agent->setGoal(agent->cell2pix(rand_cell));
+	agent->clearPath();
+	agent->CalculatePath();
+	agents.push_back(agent);
+	
 	//***** - GUN/COIN - *****//
-
 	// set the coin in a random cell (but at least 3 cells far from the agent)
 	coinPosition = Vector2D(-1, -1);
 	while ((!maze->isValidCell(coinPosition)) || (Vector2D::Distance(coinPosition, rand_cell) < 3))
-		coinPosition = Vector2D((float)(rand() % maze->getNumCellX()), (float)(rand() % maze->getNumCellY()));
-
-	//***** - FIRST INIT CALCULATION - *****//
-	agents[1]->blackboard.setGoalPtr(&maze->cell2pix(coinPosition)); // aqui se cambia el goal del agent
-	agents[1]->getGraph()->Reset(); // un reset por si acaso aunque no es necesario lap rimera vez // BORRAR UNA VEZ COLOQUEMOS VARIAS INSTANCIAS PARA MIRAR EL CAMINO
-	agents[1]->GetPathfinder()->CalculatePath(agents[1]);
+		coinPosition = Vector2D((float)(rand() % maze->getNumCellX()), (float)(rand() % maze->getNumCellY()));	
 }
 
 SceneDecisionsMouse::~SceneDecisionsMouse()
@@ -80,7 +88,10 @@ void SceneDecisionsMouse::update(float dtime, SDL_Event *event)
 		{
 			Vector2D cell = maze->pix2cell(Vector2D((float)(event->button.x), (float)(event->button.y)));
 			if (maze->isValidCell(cell)) {
-				agents[0]->addPathPoint(maze->cell2pix(cell));
+
+				agents[0]->setGoal(maze->cell2pix(cell));
+				agents[0]->clearPath();
+				agents[0]->CalculatePath();
 			}
 		}
 		break;
@@ -97,10 +108,19 @@ void SceneDecisionsMouse::update(float dtime, SDL_Event *event)
 	if ((agents[0]->getCurrentTargetIndex() == -1) && (maze->pix2cell(agents[0]->getPosition()) == coinPosition))
 	{
 		coinPosition = Vector2D(-1, -1);
-		while ((!maze->isValidCell(coinPosition)) || (Vector2D::Distance(coinPosition, maze->pix2cell(agents[0]->getPosition()))<3))
+		while ((!maze->isValidCell(coinPosition)) || (Vector2D::Distance(coinPosition, maze->pix2cell(agents[0]->getPosition())) < 3))
+		{
 			coinPosition = Vector2D((float)(rand() % maze->getNumCellX()), (float)(rand() % maze->getNumCellY()));
+			
+			agents[1]->blackboard.setGun(true);
+			agents[1]->blackboard.StartGunTimer();
+		}
 	}
-	
+
+	if (agents[1]->blackboard.getGun())
+	{
+		agents[1]->blackboard.ResetGun();
+	}
 }
 
 void SceneDecisionsMouse::draw()

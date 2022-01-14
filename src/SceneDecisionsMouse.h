@@ -12,6 +12,8 @@
 #include "Grid.h"
 #include "AStar.h"
 #include "Greedy.h"
+#include "FSM.h"
+#include "FSMWander.h"
 
 class SceneDecisionsMouse :
 	public Scene
@@ -34,5 +36,4 @@ private:
 	SDL_Texture *background_texture;
 	SDL_Texture *coin_texture;
 	bool loadTextures(char* filename_bg, char* filename_coin);
-
 };

@@ -9,16 +9,24 @@
 #include "Path.h"
 #include "utils.h"
 
-//#include "DecisionMakingAlgorithm.h"
 //#include "SensorySystem.h"
 
 #include "Blackboard.h"
 
 #include "Graph.h"
-	
+
 class Agent
 {
 public:
+
+	class DecisionMakingAlgorithm
+	{
+	public:
+		DecisionMakingAlgorithm() {};
+		~DecisionMakingAlgorithm() {};
+		virtual void Update(Agent* agent, float dtime) {};
+	};
+
 	class PathFindingAlgorithm
 	{
 	protected:
@@ -44,14 +52,14 @@ protected:
 
 private:
 	SteeringBehavior *steering_behaviour;
-	//Pathfinder
-	//DecisionMakingAlgorithm* brain;
+	DecisionMakingAlgorithm *brain;
+	PathFindingAlgorithm* pathfinder;
 
 	Vector2D position;
 	Vector2D velocity;
 	Vector2D target;
+	Vector2D goal;
 
-	PathFindingAlgorithm* pathfinder;
 	Path path;
 	int currentTargetIndex;
 
@@ -90,8 +98,17 @@ public:
 	bool Agent::loadSpriteTexture(char* filename, int num_frames=1);
 
 	Graph* getGraph() { return blackboard.getGraphPtr(); }
-	Vector2D getGoal() { return *blackboard.getGoalPtr(); }
+	void setGoal(Vector2D _goal) { goal = _goal; }
+	Vector2D getGoal() { return goal; }
 	
 	void SetPathfinder(PathFindingAlgorithm* _pathfinder) { pathfinder = _pathfinder; }
 	PathFindingAlgorithm* GetPathfinder() { return pathfinder; }
+	
+	void SetBrain(DecisionMakingAlgorithm* _brain) { brain = _brain; }
+	DecisionMakingAlgorithm* GetBrain() { return brain; }
+
+	Vector2D cell2pix(Vector2D cell);
+	Vector2D pix2cell(Vector2D pix);
+
+	void CalculatePath();
 };

@@ -134,7 +134,6 @@
     <ClCompile Include="..\src\Agent.cpp" />
     <ClCompile Include="..\src\AStar.cpp" />
     <ClCompile Include="..\src\Blackboard.cpp" />
-    <ClCompile Include="..\src\DecisionMakingAlgorithm.cpp" />
     <ClCompile Include="..\src\FSM.cpp" />
     <ClCompile Include="..\src\FSMChase.cpp" />
     <ClCompile Include="..\src\FSMFlee.cpp" />
@@ -156,7 +155,6 @@
     <ClInclude Include="..\src\Agent.h" />
     <ClInclude Include="..\src\AStar.h" />
     <ClInclude Include="..\src\Blackboard.h" />
-    <ClInclude Include="..\src\DecisionMakingAlgorithm.h" />
     <ClInclude Include="..\src\FSM.h" />
     <ClInclude Include="..\src\FSMChase.h" />
     <ClInclude Include="..\src\FSMFlee.h" />
