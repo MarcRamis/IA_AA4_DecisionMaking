@@ -1,7 +1,6 @@
-#include "Vector2D.h"
+#include "Scene.h"
+#include "Agent.h"
 
-class Scene;
-class Agent;
 class SensorySystem
 {
 private:

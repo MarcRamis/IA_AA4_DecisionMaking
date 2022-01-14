@@ -9,11 +9,10 @@
 #include "Path.h"
 #include "utils.h"
 
-//#include "SensorySystem.h"
-
 #include "Blackboard.h"
 
 #include "Graph.h"
+class SensorySystem;
 
 class Agent
 {
@@ -48,6 +47,7 @@ public:
 	};
 
 	Blackboard blackboard;
+	SensorySystem* sensors;
 protected:
 
 private:

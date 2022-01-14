@@ -1,4 +1,5 @@
 #include "Agent.h"
+#include "SensorySystem.h"
 
 using namespace std;
 
@@ -91,7 +92,7 @@ void Agent::update(float dtime, SDL_Event *event)
 		break;
 	}
 
-	//sensors.Update(this, dtime);
+	sensors->Update(this, dtime);
 	if(brain != nullptr) brain->Update(this, dtime);
 	steering_behaviour->applySteeringForce(this, dtime); // Apply the steering behavior
 	
