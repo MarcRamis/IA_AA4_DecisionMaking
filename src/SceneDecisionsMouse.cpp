@@ -36,7 +36,7 @@ SceneDecisionsMouse::SceneDecisionsMouse()
 	agent->SetPathfinder(new AStar);
 	agent->setTarget(Vector2D(-20, -20));
 	agent->SetBrain(new FSM(new FSMWander));
-	
+
 	// set agent position coords to the center of a random cell
 	rand_cell = Vector2D(-1,-1);
 	while (!maze->isValidCell(rand_cell))

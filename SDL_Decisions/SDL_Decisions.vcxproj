@@ -149,6 +149,7 @@
     <ClCompile Include="..\src\SDL_SimpleApp.cpp" />
     <ClCompile Include="..\src\Seek.cpp" />
     <ClCompile Include="..\src\SensorySystem.cpp" />
+    <ClCompile Include="..\src\Timer.cpp" />
     <ClCompile Include="..\src\utils.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -169,6 +170,7 @@
     <ClInclude Include="..\src\SceneDecisionsMouse.h" />
     <ClInclude Include="..\src\Seek.h" />
     <ClInclude Include="..\src\SensorySystem.h" />
+    <ClInclude Include="..\src\Timer.h" />
     <ClInclude Include="..\src\utils.h" />
     <ClInclude Include="..\src\Scene.h" />
     <ClInclude Include="..\src\SDL_SimpleApp.h" />
