@@ -65,7 +65,7 @@ void AStar::CalculatePath(Agent* agent)
 
 	agent->getGraph()->Reset();
 	counter++;
-	std::cout << counter << "- Explored nodes counter in AStar: " << countFrontier << std::endl;
+	//std::cout << counter << "- Explored nodes counter in AStar: " << countFrontier << std::endl;
 	countFrontier = 0;
 }
 
