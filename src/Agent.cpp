@@ -91,8 +91,8 @@ void Agent::update(float dtime, SDL_Event *event)
 	default:
 		break;
 	}
-
-	sensors->Update(this, dtime);
+	
+	if(sensors != nullptr) sensors->Update(this, dtime);
 	if(brain != nullptr) brain->Update(this, dtime);
 	steering_behaviour->applySteeringForce(this, dtime); // Apply the steering behavior
 	

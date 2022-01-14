@@ -15,6 +15,8 @@
 #include "FSM.h"
 #include "FSMWander.h"
 
+#include "SensorySystem.h"
+
 class SceneDecisionsMouse :
 	public Scene
 {
@@ -25,7 +27,6 @@ public:
 	void draw();
 	const char* getTitle();
 private:
-	std::vector<Agent*> agents;
 	Vector2D coinPosition;
 
 	Grid *maze;

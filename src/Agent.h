@@ -10,7 +10,6 @@
 #include "utils.h"
 
 #include "Blackboard.h"
-
 #include "Graph.h"
 class SensorySystem;
 
@@ -47,7 +46,7 @@ public:
 	};
 
 	Blackboard blackboard;
-	SensorySystem* sensors;
+	SensorySystem *sensors;
 protected:
 
 private:
@@ -106,6 +105,9 @@ public:
 	
 	void SetBrain(DecisionMakingAlgorithm* _brain) { brain = _brain; }
 	DecisionMakingAlgorithm* GetBrain() { return brain; }
+
+	void SetSensors(SensorySystem* _sensors) { sensors = _sensors; }
+	SensorySystem *GetSensors() { return sensors; }
 
 	Vector2D cell2pix(Vector2D cell);
 	Vector2D pix2cell(Vector2D pix);

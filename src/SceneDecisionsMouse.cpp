@@ -31,6 +31,7 @@ SceneDecisionsMouse::SceneDecisionsMouse()
 	agent = new Agent;
 	agent->loadSpriteTexture("../res/zombie2.png", 8);
 	agent->setBehavior(new PathFollowing);
+	agent->SetSensors(new SensorySystem(this));
 	agent->blackboard.setGraphPtr(graph);
 	agent->blackboard.setMazePtr(maze);
 	agent->SetPathfinder(new AStar);
