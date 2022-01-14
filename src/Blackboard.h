@@ -13,8 +13,7 @@ private:
 	bool *enemySpotted;
 	
 	Timer gunTimer;
-	int counter = 0;
-	double test, test2;
+	Timer enemySpottedTimer;
 
 public:
 	Blackboard();
@@ -28,10 +27,11 @@ public:
 
 	void setGun(bool _hasGun);
 	bool getGun();
-
 	void StartGunTimer();
 	void ResetGun();
 
 	void setEnemySpotted(bool _EnemySpotted);
 	bool getEnemySpotted();
+	void StartEnemySpottedTimer();
+	void ResetEnemySpotted();
 };

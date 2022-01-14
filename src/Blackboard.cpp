@@ -40,21 +40,12 @@ bool Blackboard::getGun()
 
 void Blackboard::StartGunTimer()
 {
-    counter = 0;
-    test = 0;
-    test2 = 0;
-
     gunTimer.Start();
 }
 
 void Blackboard::ResetGun()
 {
-    if (gunTimer.ElapsedSeconds() < 5.0)
-    {
-        counter++;
-        test = std::cos(counter / M_PI);
-        test2 = std::sin(counter / M_PI);
-    }
+    if (gunTimer.ElapsedSeconds() < 5.0){}
     else
     {
         enemyHasGun = false;
@@ -70,4 +61,19 @@ void Blackboard::setEnemySpotted(bool _EnemySpotted)
 bool Blackboard::getEnemySpotted()
 {
     return enemySpotted;
+}
+
+void Blackboard::StartEnemySpottedTimer()
+{
+    enemySpottedTimer.Start();
+}
+
+void Blackboard::ResetEnemySpotted()
+{
+    if (enemySpottedTimer.ElapsedSeconds() < 2.0) { }
+    else
+    {
+        enemySpotted = false;
+        gunTimer.Stop();
+    }
 }
