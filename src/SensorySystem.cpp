@@ -40,13 +40,20 @@ void SensorySystem::Update(Agent* agent, float dtime)
 				sightColl = true;
 				break;
 			}
+			else
+			{
+				sightColl = false;
+			}
 
 		}
 	}
+	else
+	{
+		playerNear = false;
+	}
+
 	if (!sightColl && playerNear)
 	{
 		agent->blackboard.setEnemySpotted(true);
 	}
-
-	agent->blackboard.ResetEnemySpotted();
 }

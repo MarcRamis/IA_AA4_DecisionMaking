@@ -4,8 +4,11 @@
 
 void FSMChase::Enter(Agent* agent, float dtime)
 {
-    Vector2D newPosition = agent->blackboard.getEnemyAgent()->getPosition();
-    agent->setGoal(newPosition);
+    agent->setMaxForce(100);
+    Vector2D newPosition(-1, -1);
+    newPosition = agent->pix2cell(agent->blackboard.getEnemyAgent()->getPosition());
+        
+    agent->setGoal(agent->cell2pix(newPosition));
     agent->clearPath();
     agent->CalculatePath();
     agent->blackboard.StartEnemySpottedTimer();
@@ -13,8 +16,13 @@ void FSMChase::Enter(Agent* agent, float dtime)
 
 FSMState* FSMChase::Update(Agent* agent, float dtime)
 {
-    std::cout << "Chase Update" << std::endl;
+    std::cout << "Chase" << std::endl;
+    Vector2D newPosition(-1, -1);
+    newPosition = agent->pix2cell(agent->blackboard.getEnemyAgent()->getPosition());
 
+    agent->setGoal(agent->cell2pix(newPosition));
+    agent->clearPath();
+    agent->CalculatePath();
 
     if (!agent->blackboard.getEnemySpotted()) return new FSMWander;
     if (agent->blackboard.getGun()) return new FSMFlee;
@@ -24,5 +32,4 @@ FSMState* FSMChase::Update(Agent* agent, float dtime)
 
 void FSMChase::Exit(Agent* agent, float dtime)
 {
-    std::cout << "Chase Exit" << std::endl;
 }

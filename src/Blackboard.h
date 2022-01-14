@@ -11,6 +11,7 @@ private:
 	Grid* maze;
 	
 	Agent* enemyAgent;
+	Vector2D enemyPos;
 	bool* enemyHasGun;
 	bool *enemySpotted;
 	
@@ -39,4 +40,9 @@ public:
 	
 	void setEnemyAgent(Agent* _enemyAgent);
 	Agent* getEnemyAgent();
+
+	void setEnemyPos(Vector2D _enemyPos);
+	Vector2D getEnemyPos();
+
+	void ResetTimers();
 };

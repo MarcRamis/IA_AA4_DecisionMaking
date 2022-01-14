@@ -114,4 +114,5 @@ public:
 	Vector2D pix2cell(Vector2D pix);
 
 	void CalculatePath();
+	void setMaxForce(float _maxForce) { max_force = _maxForce; };
 };

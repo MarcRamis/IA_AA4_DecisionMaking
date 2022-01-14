@@ -40,12 +40,12 @@ bool Blackboard::getGun()
 
 void Blackboard::StartGunTimer()
 {
-    gunTimer.Start();
+    if (enemyHasGun) gunTimer.Start();
 }
 
 void Blackboard::ResetGun()
 {
-    if (gunTimer.ElapsedSeconds() < 5.0){}
+    if (gunTimer.ElapsedSeconds() < 20.0){}
     else
     {
         enemyHasGun = false;
@@ -65,12 +65,13 @@ bool Blackboard::getEnemySpotted()
 
 void Blackboard::StartEnemySpottedTimer()
 {
-    enemySpottedTimer.Start();
+    if (enemySpotted) enemySpottedTimer.Start();
 }
 
 void Blackboard::ResetEnemySpotted()
 {
-    if (enemySpottedTimer.ElapsedSeconds() < 2.0) { }
+    if (enemySpottedTimer.ElapsedSeconds() < 4.0) { }
+    else if(enemySpottedTimer.ElapsedSeconds() < 3.5 && enemySpotted) { enemySpottedTimer.Start(); }
     else
     {
         enemySpotted = false;
@@ -86,4 +87,26 @@ void Blackboard::setEnemyAgent(Agent* _enemyAgent)
 Agent* Blackboard::getEnemyAgent()
 {
     return enemyAgent;
+}
+
+void Blackboard::setEnemyPos(Vector2D _enemyPos)
+{
+    enemyPos = _enemyPos;
+}
+
+Vector2D Blackboard::getEnemyPos()
+{
+    return enemyPos;
+}
+
+void Blackboard::ResetTimers()
+{
+    if (enemyHasGun)
+    {
+        ResetGun();
+    }
+    if (enemySpotted)
+    {
+        ResetEnemySpotted();
+    }
 }

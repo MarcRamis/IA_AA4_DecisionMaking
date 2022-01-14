@@ -19,6 +19,7 @@ SceneDecisionsMouse::SceneDecisionsMouse()
 	agent->setTarget(Vector2D(-20,-20));
 	agent->blackboard.setGraphPtr(graph);
 	agent->SetPathfinder(new AStar);
+	agent->setMaxForce(250);
 	agents.push_back(agent);
 	
 	// set agent position coords to the center of a random cell
@@ -35,9 +36,11 @@ SceneDecisionsMouse::SceneDecisionsMouse()
 	agent->blackboard.setGraphPtr(graph);
 	agent->blackboard.setMazePtr(maze);
 	agent->blackboard.setEnemyAgent(agents[0]);
+	agent->blackboard.setEnemyPos(agents[0]->getPosition());
 	agent->SetPathfinder(new AStar);
 	agent->setTarget(Vector2D(-20, -20));
 	agent->SetBrain(new FSM(new FSMWander));
+	agent->setMaxForce(100);
 
 	// set agent position coords to the center of a random cell
 	rand_cell = Vector2D(-1,-1);
@@ -119,10 +122,8 @@ void SceneDecisionsMouse::update(float dtime, SDL_Event *event)
 		}
 	}
 
-	if (agents[1]->blackboard.getGun())
-	{
-		agents[1]->blackboard.ResetGun();
-	}
+	agents[1]->blackboard.ResetTimers();
+	agents[1]->blackboard.setEnemyPos(agents[0]->getPosition());
 }
 
 void SceneDecisionsMouse::draw()
