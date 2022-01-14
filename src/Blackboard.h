@@ -9,6 +9,8 @@ class Blackboard
 private:
 	Graph* graph;
 	Grid* maze;
+	
+	Agent* enemyAgent;
 	bool* enemyHasGun;
 	bool *enemySpotted;
 	
@@ -34,4 +36,7 @@ public:
 	bool getEnemySpotted();
 	void StartEnemySpottedTimer();
 	void ResetEnemySpotted();
+	
+	void setEnemyAgent(Agent* _enemyAgent);
+	Agent* getEnemyAgent();
 };

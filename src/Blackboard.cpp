@@ -77,3 +77,13 @@ void Blackboard::ResetEnemySpotted()
         gunTimer.Stop();
     }
 }
+
+void Blackboard::setEnemyAgent(Agent* _enemyAgent)
+{
+    enemyAgent = _enemyAgent;
+}
+
+Agent* Blackboard::getEnemyAgent()
+{
+    return enemyAgent;
+}

@@ -4,7 +4,9 @@
 
 void FSMChase::Enter(Agent* agent, float dtime)
 {
-    std::cout << "Chase Enter" << std::endl;
+    agent->setGoal(agent->blackboard.getEnemyAgent()->getPosition());
+    agent->clearPath();
+    agent->CalculatePath();
 }
 
 FSMState* FSMChase::Update(Agent* agent, float dtime)

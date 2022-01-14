@@ -34,6 +34,7 @@ SceneDecisionsMouse::SceneDecisionsMouse()
 	agent->SetSensors(new SensorySystem(this));
 	agent->blackboard.setGraphPtr(graph);
 	agent->blackboard.setMazePtr(maze);
+	agent->blackboard.setEnemyAgent(agents[0]);
 	agent->SetPathfinder(new AStar);
 	agent->setTarget(Vector2D(-20, -20));
 	agent->SetBrain(new FSM(new FSMWander));
