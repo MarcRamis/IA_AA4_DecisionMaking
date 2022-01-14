@@ -47,4 +47,6 @@ void SensorySystem::Update(Agent* agent, float dtime)
 	{
 		agent->blackboard.setEnemySpotted(true);
 	}
+
+	agent->blackboard.ResetEnemySpotted();
 }

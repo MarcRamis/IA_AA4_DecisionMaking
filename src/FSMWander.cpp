@@ -25,9 +25,11 @@ FSMState* FSMWander::Update(Agent* agent, float dtime)
     }
     
     if (agent->blackboard.getEnemySpotted()) return new FSMChase;
+
     return nullptr;
 }
 
 void FSMWander::Exit(Agent* agent, float dtime)
 {
+    agent->clearPath();
 }
