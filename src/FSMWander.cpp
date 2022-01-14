@@ -1,5 +1,4 @@
 #include "FSMWander.h"
-//#include "FSMFlee.h"
 
 void FSMWander::Enter(Agent* agent, float dtime)
 {
@@ -10,14 +9,10 @@ void FSMWander::Enter(Agent* agent, float dtime)
     agent->setGoal(agent->cell2pix(newPosition));
     agent->clearPath();
     agent->CalculatePath();
-
-    std::cout << "Wander Enter" << std::endl;
 }
 
 FSMState* FSMWander::Update(Agent* agent, float dtime)
 {
-    std::cout << "Wander Update" << std::endl;
-
     if (Vector2D::Distance(agent->getGoal(), agent->getPosition()) < 3) {
 
         Vector2D newPosition(-1, -1);
@@ -28,12 +23,11 @@ FSMState* FSMWander::Update(Agent* agent, float dtime)
         agent->clearPath();
         agent->CalculatePath();
     }
-
-    //if (agent->blackboard.hasGun) return new FSMFlee;
-    /*else */return nullptr;
+    
+    if (agent->blackboard.getEnemySpotted()) return new FSMChase;
+    else return nullptr;
 }
 
 void FSMWander::Exit(Agent* agent, float dtime)
 {
-    std::cout << "Wander Exit" << std::endl;
 }

@@ -1,14 +1,21 @@
 #include "FSMChase.h"
+#include "FSMFlee.h"
+#include "FSMWander.h"
 
 void FSMChase::Enter(Agent* agent, float dtime)
 {
+    std::cout << "Chase Enter" << std::endl;
 }
 
 FSMState* FSMChase::Update(Agent* agent, float dtime)
 {
-    return nullptr;
+    std::cout << "Chase Update" << std::endl;
+
+    if (agent->blackboard.getGun()) return new FSMFlee;
+    else return nullptr;
 }
 
 void FSMChase::Exit(Agent* agent, float dtime)
 {
+    std::cout << "Chase Exit" << std::endl;
 }

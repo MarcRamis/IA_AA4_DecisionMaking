@@ -11,7 +11,7 @@ SceneDecisionsMouse::SceneDecisionsMouse()
 	maze = new Grid("../res/maze.csv");
 	loadTextures("../res/maze.png", "../res/gun.png");
 	Graph* graph = new Graph(maze);
-
+	
 	//***** - PLAYER - *****//
 	Agent *agent = new Agent;
 	agent->loadSpriteTexture("../res/soldier.png", 4);
@@ -20,7 +20,7 @@ SceneDecisionsMouse::SceneDecisionsMouse()
 	agent->blackboard.setGraphPtr(graph);
 	agent->SetPathfinder(new AStar);
 	agents.push_back(agent);
-
+	
 	// set agent position coords to the center of a random cell
 	Vector2D rand_cell(-1,-1);
 	while (!maze->isValidCell(rand_cell))
@@ -92,8 +92,6 @@ void SceneDecisionsMouse::update(float dtime, SDL_Event *event)
 				agents[0]->setGoal(maze->cell2pix(cell));
 				agents[0]->clearPath();
 				agents[0]->CalculatePath();
-
-				agents[0]->blackboard.hasGun = true;
 			}
 		}
 		break;
@@ -110,10 +108,19 @@ void SceneDecisionsMouse::update(float dtime, SDL_Event *event)
 	if ((agents[0]->getCurrentTargetIndex() == -1) && (maze->pix2cell(agents[0]->getPosition()) == coinPosition))
 	{
 		coinPosition = Vector2D(-1, -1);
-		while ((!maze->isValidCell(coinPosition)) || (Vector2D::Distance(coinPosition, maze->pix2cell(agents[0]->getPosition()))<3))
+		while ((!maze->isValidCell(coinPosition)) || (Vector2D::Distance(coinPosition, maze->pix2cell(agents[0]->getPosition())) < 3))
+		{
 			coinPosition = Vector2D((float)(rand() % maze->getNumCellX()), (float)(rand() % maze->getNumCellY()));
+			
+			agents[1]->blackboard.setGun(true);
+			agents[1]->blackboard.StartGunTimer();
+		}
 	}
-	
+
+	if (agents[1]->blackboard.getGun())
+	{
+		agents[1]->blackboard.ResetGun();
+	}
 }
 
 void SceneDecisionsMouse::draw()
