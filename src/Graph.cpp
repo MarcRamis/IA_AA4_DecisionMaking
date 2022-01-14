@@ -80,6 +80,7 @@ Graph::Graph(Grid *grid)
 				if ((j != 0 && j != grid->getNumCellX() - 1) && (i != 0 && i != grid->getNumCellY() - 1))
 				{
 					Node* tmpNode = new Node(Vector2D((unsigned int)j, (unsigned int)i));
+
 					nodesWall.push_back(tmpNode);
 				}
 				
@@ -100,6 +101,11 @@ Graph::~Graph()
 std::vector<Node*> Graph::getNodes()
 {
 	return nodes;
+}
+
+std::vector<Node*> Graph::getNodesWall()
+{
+	return nodesWall;
 }
 
 Node* Graph::getCurrentNodePosition(Vector2D target)

@@ -77,6 +77,11 @@ void Agent::setVelocity(Vector2D _velocity)
 	velocity = _velocity;
 }
 
+float Agent::getOrientation()
+{
+	return orientation;
+}
+
 void Agent::update(float dtime, SDL_Event *event)
 {
 
@@ -173,7 +178,11 @@ void Agent::draw()
 		draw_circle(TheApp::Instance()->getRenderer(), (int)position.x, (int)position.y, 15, 255, 255, 255, 255);
 		SDL_RenderDrawLine(TheApp::Instance()->getRenderer(), (int)position.x, (int)position.y, (int)(position.x+15*cos(orientation*DEG2RAD)), (int)(position.y+15*sin(orientation*DEG2RAD)));
 	}
-
+	if (sensors != nullptr)
+	{
+		draw_circle(TheApp::Instance()->getRenderer(), (int)position.x, (int)position.y, 10 * CELL_SIZE, 255, 0, 0, 255);
+		SDL_RenderDrawLine(TheApp::Instance()->getRenderer(), (int)position.x, (int)position.y, (int)(position.x + (10 * CELL_SIZE) * cos(orientation * DEG2RAD)), (int)(position.y + (10 * CELL_SIZE) * sin(orientation * DEG2RAD)));
+	}
 	
 }
 

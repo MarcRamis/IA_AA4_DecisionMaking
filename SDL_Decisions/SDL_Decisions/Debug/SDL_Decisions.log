@@ -1,2 +1,12 @@
 ﻿  SensorySystem.cpp
-  SDL_Decisions.vcxproj -> D:\Uni Projects\IA\AA4_DecisionMaking\bin\SDL_Decisions.exe
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\SensorySystem.cpp(26,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\SensorySystem.cpp(25,118): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\SensorySystem.cpp(31,193): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\SensorySystem.cpp(31,142): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\SensorySystem.cpp(32,101): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\SensorySystem.cpp(32,50): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\SensorySystem.cpp(37,198): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\SensorySystem.cpp(37,147): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\SensorySystem.cpp(38,101): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\src\SensorySystem.cpp(38,50): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  SDL_Decisions.vcxproj -> C:\Users\alex\Documents\Universidad\GitKraken\AA4_DecisionMaking\bin\SDL_Decisions.exe
