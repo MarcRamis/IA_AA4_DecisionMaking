@@ -3,6 +3,7 @@
 
 #include "Graph.h"
 #include "Timer.h"
+#include "Constants.h"
 
 class Blackboard
 {
@@ -41,8 +42,5 @@ public:
 	void setEnemyAgent(Agent* _enemyAgent);
 	Agent* getEnemyAgent();
 
-	void setEnemyPos(Vector2D _enemyPos);
-	Vector2D getEnemyPos();
-
-	void ResetTimers();
+	void UpdateTimers();
 };

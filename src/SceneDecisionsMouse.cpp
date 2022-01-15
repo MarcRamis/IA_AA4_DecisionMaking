@@ -19,7 +19,7 @@ SceneDecisionsMouse::SceneDecisionsMouse()
 	agent->setTarget(Vector2D(-20,-20));
 	agent->blackboard.setGraphPtr(graph);
 	agent->SetPathfinder(new AStar);
-	agent->setMaxForce(250);
+	agent->setMaxVelocity(220);
 	agents.push_back(agent);
 	
 	// set agent position coords to the center of a random cell
@@ -29,35 +29,42 @@ SceneDecisionsMouse::SceneDecisionsMouse()
 	agents[0]->setPosition(maze->cell2pix(rand_cell));
 
 	//***** - ENEMY - *****//
-	agent = new Agent;
-	agent->loadSpriteTexture("../res/zombie2.png", 8);
-	agent->setBehavior(new PathFollowing);
-	agent->SetSensors(new SensorySystem(this));
-	agent->blackboard.setGraphPtr(graph);
-	agent->blackboard.setMazePtr(maze);
-	agent->blackboard.setEnemyAgent(agents[0]);
-	agent->blackboard.setEnemyPos(agents[0]->getPosition());
-	agent->SetPathfinder(new AStar);
-	agent->setTarget(Vector2D(-20, -20));
-	agent->SetBrain(new FSM(new FSMWander));
-	agent->setMaxForce(100);
+	for (int i = 0; i < MAX_ENEMIES; i++)
+	{
+		agent = new Agent;
+		agent->loadSpriteTexture("../res/zombie2.png", 8);
+		
+		// Set blackboard variables
+		agent->blackboard.setGraphPtr(graph);
+		agent->blackboard.setMazePtr(maze);
+		agent->blackboard.setEnemyAgent(agents[0]);
+		//
 
-	// set agent position coords to the center of a random cell
-	rand_cell = Vector2D(-1,-1);
-	while (!maze->isValidCell(rand_cell))
-		rand_cell = Vector2D((float)(rand() % maze->getNumCellX()), (float)(rand() % maze->getNumCellY()));
-	
-	agent->setPosition(maze->cell2pix(rand_cell));
+		agent->setBehavior(new PathFollowing);
+		agent->SetSensors(new SensorySystem(this));
+		agent->SetPathfinder(new AStar);
+		agent->SetBrain(new FSM(new FSMWander));
+		
+		agent->setTarget(Vector2D(-20, -20));
+		agent->setMaxVelocity(100);
 
-	// set agent position initial to go
-	rand_cell = Vector2D(-1, -1);
-	while (!maze->isValidCell(rand_cell))
-		rand_cell = Vector2D((float)(rand() % maze->getNumCellX()), (float)(rand() % maze->getNumCellY()));
+		// set agent position coords to the center of a random cell
+		rand_cell = Vector2D(-1, -1);
+		while (!maze->isValidCell(rand_cell))
+			rand_cell = Vector2D((float)(rand() % maze->getNumCellX()), (float)(rand() % maze->getNumCellY()));
 
-	agent->setGoal(agent->cell2pix(rand_cell));
-	agent->clearPath();
-	agent->CalculatePath();
-	agents.push_back(agent);
+		agent->setPosition(maze->cell2pix(rand_cell));
+
+		// set agent position initial to go
+		rand_cell = Vector2D(-1, -1);
+		while (!maze->isValidCell(rand_cell))
+			rand_cell = Vector2D((float)(rand() % maze->getNumCellX()), (float)(rand() % maze->getNumCellY()));
+
+		agent->setGoal(agent->cell2pix(rand_cell));
+		agent->clearPath();
+		agent->CalculatePath();
+		agents.push_back(agent);
+	}
 	
 	//***** - GUN/COIN - *****//
 	// set the coin in a random cell (but at least 3 cells far from the agent)
@@ -110,20 +117,25 @@ void SceneDecisionsMouse::update(float dtime, SDL_Event *event)
 	}
 
 	// if we have arrived to the coin, replace it in a random cell!
-	if ((agents[0]->getCurrentTargetIndex() == -1) && (maze->pix2cell(agents[0]->getPosition()) == coinPosition))
+	if (Vector2D::Distance(coinPosition, maze->pix2cell(agents[0]->getPosition())) < 2)
 	{
 		coinPosition = Vector2D(-1, -1);
 		while ((!maze->isValidCell(coinPosition)) || (Vector2D::Distance(coinPosition, maze->pix2cell(agents[0]->getPosition())) < 3))
 		{
 			coinPosition = Vector2D((float)(rand() % maze->getNumCellX()), (float)(rand() % maze->getNumCellY()));
 			
-			agents[1]->blackboard.setGun(true);
-			agents[1]->blackboard.StartGunTimer();
+			for (int i = 1; i < agents.size(); i++)
+			{
+				agents[i]->blackboard.setGun(true);
+				agents[i]->blackboard.StartGunTimer();
+			}
 		}
 	}
 
-	agents[1]->blackboard.ResetTimers();
-	agents[1]->blackboard.setEnemyPos(agents[0]->getPosition());
+	for (int i = 1; i < agents.size(); i++)
+	{
+		agents[i]->blackboard.UpdateTimers();
+	}	
 }
 
 void SceneDecisionsMouse::draw()
@@ -141,6 +153,17 @@ void SceneDecisionsMouse::draw()
 		for (int j = 0; j < SRC_HEIGHT; j = j += CELL_SIZE)
 		{
 			SDL_RenderDrawLine(TheApp::Instance()->getRenderer(), 0, j, SRC_WIDTH, j);
+		}
+
+		for (int i = 1; i < agents.size(); i++)
+		{
+			for (Node* wall : agents[i]->getGraph()->getNodesWall())
+			{
+				SDL_SetRenderDrawColor(TheApp::Instance()->getRenderer(), 0, 255, 0, 255);
+				Vector2D tempVec = agents[i]->cell2pix(Vector2D(wall->pos.x, wall->pos.y));
+				SDL_RenderDrawLine(TheApp::Instance()->getRenderer(), (int)tempVec.x - CELL_SIZE / 2, (int)tempVec.y - CELL_SIZE / 2, (int)tempVec.x + CELL_SIZE / 2, (int)tempVec.y + CELL_SIZE / 2);
+				SDL_RenderDrawLine(TheApp::Instance()->getRenderer(), (int)tempVec.x + CELL_SIZE / 2, (int)tempVec.y - CELL_SIZE / 2, (int)tempVec.x - CELL_SIZE / 2, (int)tempVec.y + CELL_SIZE / 2);
+			}
 		}
 	}
 
@@ -177,16 +200,6 @@ void SceneDecisionsMouse::drawMaze()
 			
 		}
 	}
-	for (Node* wall : agents[1]->getGraph()->getNodesWall())
-	{
-		SDL_SetRenderDrawColor(TheApp::Instance()->getRenderer(), 0, 255, 0, 255);
-		Vector2D tempVec = agents[1]->cell2pix(Vector2D(wall->pos.x, wall->pos.y));
-		SDL_RenderDrawLine(TheApp::Instance()->getRenderer(), (int)tempVec.x - CELL_SIZE/2, (int)tempVec.y - CELL_SIZE / 2, (int)tempVec.x + CELL_SIZE / 2, (int)tempVec.y + CELL_SIZE / 2);
-		SDL_RenderDrawLine(TheApp::Instance()->getRenderer(), (int)tempVec.x + CELL_SIZE / 2, (int)tempVec.y - CELL_SIZE / 2, (int)tempVec.x - CELL_SIZE / 2, (int)tempVec.y + CELL_SIZE / 2);
-	}
-	
-	//Alternative: render a backgroud texture:
-	//SDL_RenderCopy(TheApp::Instance()->getRenderer(), background_texture, NULL, NULL );
 }
 
 void SceneDecisionsMouse::drawCoin()

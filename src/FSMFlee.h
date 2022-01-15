@@ -15,7 +15,6 @@ private:
     Vector2D newPosition;
 
     void AvoidAgent(Agent* agent);
-    void CalculatePath(Agent* agent);
-    Vector2D CalculatePosition(Agent* agent);
+    Vector2D CalculateNewPosition(Agent* agent);
 };
 

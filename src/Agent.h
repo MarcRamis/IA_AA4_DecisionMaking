@@ -115,4 +115,5 @@ public:
 
 	void CalculatePath();
 	void setMaxForce(float _maxForce) { max_force = _maxForce; };
+	void setMaxVelocity(float maxVelocity) { max_velocity = maxVelocity; };
 };

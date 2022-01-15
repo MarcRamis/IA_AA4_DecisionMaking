@@ -4,7 +4,7 @@
 
 void FSMChase::Enter(Agent* agent, float dtime)
 {
-    agent->setMaxForce(100);
+    agent->setMaxVelocity(150);
     Vector2D newPosition(-1, -1);
     newPosition = agent->pix2cell(agent->blackboard.getEnemyAgent()->getPosition());
         

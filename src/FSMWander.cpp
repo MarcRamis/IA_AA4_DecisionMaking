@@ -2,7 +2,7 @@
 
 void FSMWander::Enter(Agent* agent, float dtime)
 {
-    agent->setMaxForce(100);
+    agent->setMaxVelocity(100);
     Vector2D newPosition(-1, -1);
     while (!agent->blackboard.getMazePtr()->isValidCell(newPosition))
         newPosition = Vector2D((float)(rand() % agent->blackboard.getMazePtr()->getNumCellX()), (float)(rand() % agent->blackboard.getMazePtr()->getNumCellY()));
@@ -15,7 +15,7 @@ void FSMWander::Enter(Agent* agent, float dtime)
 FSMState* FSMWander::Update(Agent* agent, float dtime)
 {
     std::cout << "Wander" << std::endl;
-    if (Vector2D::Distance(agent->getGoal(), agent->getPosition()) < 3) {
+    if (Vector2D::Distance(agent->getGoal(), agent->getPosition()) < DISTANCE_TO_GET_NEWPOSITION) {
 
         Vector2D newPosition(-1, -1);
         while (!agent->blackboard.getMazePtr()->isValidCell(newPosition))

@@ -154,7 +154,8 @@ void Agent::draw()
 	// Path
 	for (int i = 0; i < (int)path.points.size(); i++)
 	{
-		draw_circle(TheApp::Instance()->getRenderer(), (int)(path.points[i].x), (int)(path.points[i].y), 15, 255, 255, 0, 255);
+		if (blackboard.getEnemyAgent() != nullptr) draw_circle(TheApp::Instance()->getRenderer(), (int)(path.points[i].x), (int)(path.points[i].y), 15, 255, 0, 0, 255);
+		else draw_circle(TheApp::Instance()->getRenderer(), (int)(path.points[i].x), (int)(path.points[i].y), 15, 0, 255, 0, 255);
 		if (i > 0)
 			SDL_RenderDrawLine(TheApp::Instance()->getRenderer(), (int)(path.points[i - 1].x), (int)(path.points[i - 1].y), (int)(path.points[i].x), (int)(path.points[i].y));
 	}
@@ -177,13 +178,15 @@ void Agent::draw()
 	{
 		draw_circle(TheApp::Instance()->getRenderer(), (int)position.x, (int)position.y, 15, 255, 255, 255, 255);
 		SDL_RenderDrawLine(TheApp::Instance()->getRenderer(), (int)position.x, (int)position.y, (int)(position.x+15*cos(orientation*DEG2RAD)), (int)(position.y+15*sin(orientation*DEG2RAD)));
+
+		if (sensors != nullptr)
+		{
+			draw_circle(TheApp::Instance()->getRenderer(), (int)position.x, (int)position.y, ENEMY_VIEWDISTANCE_IN_CELLS * CELL_SIZE, 255, 0, 0, 255);
+			SDL_RenderDrawLine(TheApp::Instance()->getRenderer(), (int)position.x, (int)position.y,
+				(int)(position.x + (ENEMY_VIEWDISTANCE_IN_CELLS * CELL_SIZE) * cos(orientation * DEG2RAD)),
+				(int)(position.y + (ENEMY_VIEWDISTANCE_IN_CELLS * CELL_SIZE) * sin(orientation * DEG2RAD)));
+		}
 	}
-	if (sensors != nullptr)
-	{
-		draw_circle(TheApp::Instance()->getRenderer(), (int)position.x, (int)position.y, 10 * CELL_SIZE, 255, 0, 0, 255);
-		SDL_RenderDrawLine(TheApp::Instance()->getRenderer(), (int)position.x, (int)position.y, (int)(position.x + (10 * CELL_SIZE) * cos(orientation * DEG2RAD)), (int)(position.y + (10 * CELL_SIZE) * sin(orientation * DEG2RAD)));
-	}
-	
 }
 
 bool Agent::loadSpriteTexture(char* filename, int _num_frames)

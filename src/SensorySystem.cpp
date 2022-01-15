@@ -15,13 +15,13 @@ SensorySystem::~SensorySystem()
 
 void SensorySystem::Update(Agent* agent, float dtime)
 {
-	bool sightColl = false;
-	bool playerNear = false;
+	playerNear = false;
+	sightColl = false;
 
-	if (Vector2D::Distance(agent->blackboard.getEnemyAgent()->getPosition(), agent->getPosition()) < 10 * CELL_SIZE &&
+	if (Vector2D::Distance(agent->blackboard.getEnemyAgent()->getPosition(), agent->getPosition()) < ENEMY_VIEWDISTANCE_IN_CELLS * CELL_SIZE &&
 		Vector2DUtils::IsInsideCone(agent->blackboard.getEnemyAgent()->getPosition(), agent->getPosition(),
-			Vector2D((int)(agent->getPosition().x + (10 * CELL_SIZE) * cos(agent->getOrientation() * DEG2RAD)),
-				(int)(agent->getPosition().y + (10 * CELL_SIZE) * sin(agent->getOrientation() * DEG2RAD))), 45.0f))
+			Vector2D((int)(agent->getPosition().x + (ENEMY_VIEWDISTANCE_IN_CELLS * CELL_SIZE) * cos(agent->getOrientation() * DEG2RAD)),
+				(int)(agent->getPosition().y + (ENEMY_VIEWDISTANCE_IN_CELLS * CELL_SIZE) * sin(agent->getOrientation() * DEG2RAD))), ENEMY_CONEANGLE))
 	{
 		playerNear = true;
 		for (Node* wall : agent->getGraph()->getNodesWall())
@@ -40,16 +40,7 @@ void SensorySystem::Update(Agent* agent, float dtime)
 				sightColl = true;
 				break;
 			}
-			else
-			{
-				sightColl = false;
-			}
-
 		}
-	}
-	else
-	{
-		playerNear = false;
 	}
 
 	if (!sightColl && playerNear)

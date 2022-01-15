@@ -45,8 +45,7 @@ void Blackboard::StartGunTimer()
 
 void Blackboard::ResetGun()
 {
-    if (gunTimer.ElapsedSeconds() < 20.0){}
-    else
+    if (gunTimer.ElapsedSeconds() >= ENEMY_TIMERDURATION_GUN)
     {
         enemyHasGun = false;
         gunTimer.Stop();
@@ -70,13 +69,13 @@ void Blackboard::StartEnemySpottedTimer()
 
 void Blackboard::ResetEnemySpotted()
 {
-    if (enemySpottedTimer.ElapsedSeconds() < 4.0) { }
-    else if(enemySpottedTimer.ElapsedSeconds() < 3.5 && enemySpotted) { enemySpottedTimer.Start(); }
-    else
+    if (enemySpottedTimer.ElapsedSeconds() >= ENEMY_TIMERDURATION_SPOT)
     {
         enemySpotted = false;
-        gunTimer.Stop();
+        enemySpottedTimer.Stop();
     }
+
+    //std::cout << "EnemySpooted Timer: "<< enemySpottedTimer.ElapsedSeconds() << std::endl;
 }
 
 void Blackboard::setEnemyAgent(Agent* _enemyAgent)
@@ -89,17 +88,7 @@ Agent* Blackboard::getEnemyAgent()
     return enemyAgent;
 }
 
-void Blackboard::setEnemyPos(Vector2D _enemyPos)
-{
-    enemyPos = _enemyPos;
-}
-
-Vector2D Blackboard::getEnemyPos()
-{
-    return enemyPos;
-}
-
-void Blackboard::ResetTimers()
+void Blackboard::UpdateTimers()
 {
     if (enemyHasGun)
     {

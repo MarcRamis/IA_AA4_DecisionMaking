@@ -156,6 +156,7 @@
     <ClInclude Include="..\src\Agent.h" />
     <ClInclude Include="..\src\AStar.h" />
     <ClInclude Include="..\src\Blackboard.h" />
+    <ClInclude Include="..\src\Constants.h" />
     <ClInclude Include="..\src\FSM.h" />
     <ClInclude Include="..\src\FSMChase.h" />
     <ClInclude Include="..\src\FSMFlee.h" />
