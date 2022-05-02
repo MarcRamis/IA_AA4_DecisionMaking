@@ -1,0 +1,3 @@
+﻿  Agent.cpp
+D:\Uni Projects\IA\AA4_DecisionMaking\src\Agent.cpp(184,113): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  SDL_Decisions.vcxproj -> D:\Uni Projects\IA\AA4_DecisionMaking\bin\SDL_Decisions.exe
